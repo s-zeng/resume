@@ -2,9 +2,14 @@ name: CI
 
 on:
   push:
+    branches: [ main ]
   pull_request:
+    branches: [ main ]
   release:
     types: [created]
+  schedule:
+    # Runs every Thursday at 20:23 GMT to avoid bit rot
+    - cron: "20 23 * * 6"
 
 jobs:
   build:
@@ -21,12 +26,11 @@ jobs:
           version: '1.28.0'
 
       - name: Install xelatex
-        uses: xu-cheng/latex-action@v2
-        with:
-          latexmk_use_xelatex: true
+        run: sudo apt-get install texlive-xetex
 
-      - name: Install pandoc
-        uses: Ender-events/pandoc@master
+      - uses: r-lib/actions/setup-pandoc@v1
+        with:
+          pandoc-version: '2.7.3' # The pandoc version to download (if necessary) and use.
 
       - name: Make
         run: "cd zeng-simon-resume && make all"
