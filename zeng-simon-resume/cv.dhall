@@ -2,6 +2,11 @@ let makeResume = ./dhallResume.dhall
 
 let resume = makeResume.helpers
 
+let socials =
+      { github = resume.socialHelpers.github::{ userName = "s-zeng" }
+      , linkedin = resume.socialHelpers.linkedin::{ userName = "s-zeng1" }
+      }
+
 let info =
       resume.PersonalInfo::{
       , name = "Simon Zeng"
@@ -9,10 +14,7 @@ let info =
       , email = "contact@simonzeng.com"
       , phone = "1 (613) 983-9079"
       , site = "simonzeng.com"
-      , socials = toMap
-          { github = resume.socialHelpers.github::{ userName = "s-zeng" }
-          , linkedin = resume.socialHelpers.linkedin::{ userName = "s-zeng1" }
-          }
+      , socials = toMap socials
       }
 
 let workExperience =
@@ -233,4 +235,5 @@ in  { info
     , miscExperience
     , coursework
     , education
+    , socials
     }

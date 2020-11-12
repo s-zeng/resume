@@ -1,2 +1,2 @@
 -- import dhall-resume in one place in case we decide to change the folder structure or make it a remote import
-../dhall-resume/package.dhall sha256:4e8d5f7e81bd7d31b90e79ede6e1f86cf701b4d235f877fd9421118c192dc361
+../dhall-resume/package.dhall sha256:6c5bf9f0c023ee2d1f4c460a786407a538faa0b6461dc8d973e2abcc845ea387

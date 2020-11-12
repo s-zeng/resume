@@ -4,4 +4,6 @@ let Prelude = helpers.Prelude
 
 let latex = ./makeLatex.dhall
 
-in  { helpers, Prelude, latex }
+let markdown = ./makeMarkdown.dhall
+
+in  { helpers, Prelude, latex, markdown }

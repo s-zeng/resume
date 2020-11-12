@@ -38,6 +38,17 @@ let Date = { Type = { year : Natural, month : Month }, default = {=} }
 
 let EndDate = < Date : Date.Type | Current >
 
+let makeDate =
+      λ(date : Date.Type) →
+        "${monthToShortText date.month} ${Natural/show date.year}"
+
+let makeDates =
+      λ(jobDates : { start : Date.Type, end : EndDate }) →
+        let endDate =
+              merge { Date = makeDate, Current = "Present" } jobDates.end
+
+        in  "${makeDate jobDates.start} -- ${endDate}"
+
 let SocialLink = { Type = { userName : Text, baseUrl : Text }, default = {=} }
 
 let socialHelpers =
@@ -112,6 +123,8 @@ in  { Commit
     , Prelude
     , Project
     , SocialLink
+    , makeDate
+    , makeDates
     , makeSocialURL
     , monthToShortText
     , socialHelpers

@@ -68,39 +68,27 @@ let makeItems =
 let makeSkills =
       λ(skills : List Text) →
         let wrapped =
-              Prelude.Text.concatMapSep "\n" Text (λ(s : Text) → "\\cvtag{${s}}") skills
+              Prelude.Text.concatMapSep
+                "\n"
+                Text
+                (λ(s : Text) → "\\cvtag{${s}}")
+                skills
 
         in  "\\textrm{\\textcolor{body}{\\normalfont \\hspace{-0.6em} ${wrapped}}}"
 
 let formatJob =
       λ(job : helpers.Job.Type) →
-        let makeDate =
-              λ(date : helpers.Date.Type) →
-                "${helpers.monthToShortText date.month} ${Natural/show
-                                                            date.year}"
+        ''
+        \job{${job.company}}
+            {${job.title}}
+            {${makeSkills job.skills}}
+            {${helpers.makeDates job.dates}}
+            {${job.location}}
 
-        let makeDates =
-              λ ( jobDates
-                : { start : helpers.Date.Type, end : helpers.EndDate }
-                ) →
-                let endDate =
-                      merge
-                        { Date = makeDate, Current = "Present" }
-                        jobDates.end
-
-                in  "${makeDate jobDates.start} -- ${endDate}"
-
-        in  ''
-            \job{${job.company}}
-                {${job.title}}
-                {${makeSkills job.skills}}
-                {${makeDates job.dates}}
-                {${job.location}}
-
-            \begin{tightitemize}
-                ${makeItems job.bulletPoints}
-            \end{tightitemize}
-            ''
+        \begin{tightitemize}
+            ${makeItems job.bulletPoints}
+        \end{tightitemize}
+        ''
 
 let makeHeader =
       λ(options : Options.Type) →
