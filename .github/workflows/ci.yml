@@ -26,7 +26,10 @@ jobs:
           version: '1.36.0'
 
       - name: Install xelatex
-        run: sudo apt-get install texlive-xetex
+        run: |
+          sudo apt-get install texlive-xetex
+          sudo apt-get install texlive-fonts-extra
+          sudo apt-get install fonts-font-awesome
 
       - uses: r-lib/actions/setup-pandoc@v1
         with:
