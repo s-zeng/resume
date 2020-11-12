@@ -6,11 +6,10 @@ DEPENDS=$(wildcard *.dhall) target/
 all: $(ARTIFACTS)
 
 target/$(RESUME_NAME).json: $(DEPENDS)
-	dhall < cv.dhall --explain
 	dhall-to-json < cv.dhall > $@
 
 target/$(RESUME_NAME).yaml: $(DEPENDS)
-	dhall-to-yaml-ng < cv.dhall > $@
+	dhall-to-yaml < cv.dhall > $@
 
 target/$(RESUME_NAME).dhall: $(DEPENDS)
 	dhall < cv.dhall > $@
