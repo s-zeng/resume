@@ -23,7 +23,7 @@ jobs:
       - name: Install dhall
         uses: dhall-lang/setup-dhall@v4
         with:
-          version: '1.28.0'
+          version: '1.36.0'
 
       - name: Install xelatex
         run: sudo apt-get install texlive-xetex
