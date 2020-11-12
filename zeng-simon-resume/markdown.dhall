@@ -8,7 +8,7 @@ let helpers = dhallResume.helpers
 
 let markdown = dhallResume.markdown
 
-let baseURL = "https://simonzeng.com/"
+let baseURL = "https://simonzeng.com/resume"
 
 let resumeName = "Zeng_Simon_Resume"
 
@@ -53,6 +53,7 @@ in  ''
 
     - [Markdown](${baseURL}/${resumeName}.md) (you are here!)
     - [Pretty pdf](${baseURL}/${resumeName}.pdf)
+    - [Pdf for ATS](${baseURL}/${resumeName}.minimal.pdf)
 
     Or consumable in the following machine-readable formats:
 

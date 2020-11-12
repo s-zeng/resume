@@ -14,7 +14,10 @@ target/$(RESUME_NAME).yaml: $(DEPENDS)
 target/$(RESUME_NAME).dhall: $(DEPENDS)
 	dhall < cv.dhall > $@
 
-target/index.md: markdown.dhall $(DEPENDS)
+target/index.md: target/$(RESUME_NAME).md
+	cp target/$(RESUME_NAME).md $@
+
+target/$(RESUME_NAME).md: markdown.dhall $(DEPENDS)
 	dhall text < markdown.dhall > $@
 
 target/$(RESUME_NAME).pdf: $(DEPENDS) latex/Makefile $(wildcard latex/*.dhall)
