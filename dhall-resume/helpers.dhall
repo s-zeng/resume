@@ -34,11 +34,11 @@ let monthToShortText =
           }
           m
 
-let Date = { Type = { year : Natural, month : Month }, default = {} }
+let Date = { Type = { year : Natural, month : Month }, default = {=} }
 
 let EndDate = < Date : Date.Type | Current >
 
-let SocialLink = { Type = { userName : Text, baseUrl : Text }, default = {} }
+let SocialLink = { Type = { userName : Text, baseUrl : Text }, default = {=} }
 
 let socialHelpers =
       { github =
@@ -62,10 +62,11 @@ let PersonalInfo =
       , default = {=}
       }
 
-let JobDescription =
+let Job =
       { Type =
           { title : Text
           , location : Text
+          , company : Text
           , dates : { start : Date.Type, end : EndDate }
           , skills : List Text
           , bulletPoints : List Text
@@ -73,28 +74,46 @@ let JobDescription =
       , default = { skills = [] : List Text, bulletPoints = [] : List Text }
       }
 
-let Job =
-      { Type = { company : Text, description : JobDescription.Type }
-      , default = {}
-      }
-
-let jobEntryToJob =
-      λ(jobEntry : { mapKey : Text, mapValue : JobDescription.Type }) →
-        { company = jobEntry.mapKey, description = jobEntry.mapValue }
-
 let sweIntern = λ(type : Text) → "Software Engineering Intern (${type})"
 
-in  { Job
-    , JobDescription
+let IconHighlight =
+      { Type = { icon : Text, title : Text, blurb : Text }, default = {=} }
+
+let Project =
+      { Type = { author : Text, title : Text, skills : List Text, blurb : Text }
+      , default = {=}
+      }
+
+let Commit =
+      { Type = { longHash : Text, shortHash : Text, blurb : Text }
+      , default = {=}
+      }
+
+let Contrib =
+      { Type = { project : Project.Type, commits : List Commit.Type }
+      , default.commits = [] : List Commit.Type
+      }
+
+let Education =
+      { Type =
+          { school : Text, degree : Text, major : Text, gradDate : Date.Type }
+      , default.gradDate = Date.default
+      }
+
+in  { Commit
+    , Contrib
     , Date
+    , Education
     , EndDate
-    , jobEntryToJob
-    , sweIntern
-    , PersonalInfo
-    , SocialLink
-    , socialHelpers
-    , makeSocialURL
-    , Prelude
-    , monthToShortText
+    , IconHighlight
+    , Job
     , Month
+    , PersonalInfo
+    , Prelude
+    , Project
+    , SocialLink
+    , makeSocialURL
+    , monthToShortText
+    , socialHelpers
+    , sweIntern
     }
