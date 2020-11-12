@@ -1,6 +1,6 @@
 let cv = ../cv.dhall
 
-let makeResume = cv.makeResume
+let makeResume = ../dhallResume.dhall
 
 let latex = makeResume.latex
 
@@ -32,8 +32,17 @@ let jobs
       , experience.`inBay Technologies`
       ]
 
+let sep =
+      ''
+
+      \medskip
+      \divider
+      \smallskip
+
+      ''
+
 let resume
     : Text
-    = latex.makeResume options cv.info jobs
+    = latex.makeResume cv.info options jobs sep
 
 in  resume

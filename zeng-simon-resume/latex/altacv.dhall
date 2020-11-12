@@ -1,1 +1,1 @@
-let cv = ../cv.dhall in cv.makeResume.latex.documentClass
+let dhallResume = ../dhallResume.dhall in dhallResume.latex.documentClass

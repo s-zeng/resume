@@ -48,13 +48,13 @@ let skips =
           \bigskip
 
           ''
-      , divider = 
+      , divider =
           ''
 
           \divider
 
           ''
-      , smallDivider = 
+      , smallDivider =
           ''
 
           \smalldivider
@@ -68,7 +68,7 @@ let makeItems =
 let makeSkills =
       λ(skills : List Text) →
         let wrapped =
-              Prelude.Text.concatMap Text (λ(s : Text) → "\\cvtag{${s}}") skills
+              Prelude.Text.concatMapSep "\n" Text (λ(s : Text) → "\\cvtag{${s}}") skills
 
         in  "\\textrm{\\textcolor{body}{\\normalfont \\hspace{-0.6em} ${wrapped}}}"
 
@@ -177,17 +177,8 @@ let makePersonalInfo =
 
 let makeExperience =
       λ(experience : List helpers.Job.Type) →
-        let makeJobs =
-              Prelude.Text.concatMapSep
-                ''
-
-                \medskip
-                \divider
-                \smallskip
-
-                ''
-                helpers.Job.Type
-                formatJob
+      λ(sep : Text) →
+        let makeJobs = Prelude.Text.concatMapSep sep helpers.Job.Type formatJob
 
         in  ''
             %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
@@ -199,13 +190,14 @@ let makeExperience =
                   ''
 
 let makeResume =
-      λ(options : Options.Type) →
       λ(info : helpers.PersonalInfo.Type) →
+      λ(options : Options.Type) →
       λ(experience : List helpers.Job.Type) →
+      λ(sep : Text) →
         ''
         ${makeHeader options}
         ${makePersonalInfo info}
-        ${makeExperience experience}
+        ${makeExperience experience sep}
         \end{document}
         ''
 
@@ -225,6 +217,7 @@ let makeSummary = makeListSection "Summary"
 let makeCoursework = makeListSection "Coursework"
 
 let makeProjects =
+      λ(sep : Text) →
       λ(projects : List helpers.Project.Type) →
         let makeProject =
               λ(project : helpers.Project.Type) →
@@ -236,7 +229,7 @@ let makeProjects =
 
         let projectText =
               Prelude.Text.concatMapSep
-                skips.smallDivider
+                sep
                 helpers.Project.Type
                 makeProject
                 projects
@@ -248,6 +241,7 @@ let makeProjects =
             ''
 
 let makeOSS =
+      λ(sep : Text) →
       λ(contribs : List helpers.Contrib.Type) →
         let makeContrib =
               λ(contrib : helpers.Contrib.Type) →
@@ -273,7 +267,7 @@ let makeOSS =
 
         let textContribs =
               Prelude.Text.concatMapSep
-                skips.smallDivider
+                sep
                 helpers.Contrib.Type
                 makeContrib
                 contribs

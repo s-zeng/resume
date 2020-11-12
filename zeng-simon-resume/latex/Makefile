@@ -1,14 +1,16 @@
+DEPENDS=../cv.dhall ../dhallResume.dhall
+
 Zeng_Simon_Resume.pdf: altacv.cls resume.tex sidebar.tex
 	xelatex resume.tex
 	mv resume.pdf Zeng_Simon_Resume.pdf
 
-altacv.cls: altacv.dhall ../cv.dhall
+altacv.cls: altacv.dhall ${DEPENDS}
 	dhall text < altacv.dhall > altacv.cls
 
-resume.tex: resume.dhall ../cv.dhall
+resume.tex: resume.dhall ${DEPENDS}
 	dhall text < resume.dhall > resume.tex
 
-sidebar.tex: sidebar.dhall ../cv.dhall
+sidebar.tex: sidebar.dhall ${DEPENDS}
 	dhall text < sidebar.dhall > sidebar.tex
 
 .PHONY: clean

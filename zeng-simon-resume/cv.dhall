@@ -1,4 +1,4 @@
-let makeResume = ../dhall-resume/package.dhall
+let makeResume = ./dhallResume.dhall
 
 let resume = makeResume.helpers
 
@@ -23,8 +23,7 @@ let workExperience =
         , dates =
           { start = { year = 2020, month = resume.Month.September }
           , end =
-              resume.EndDate.Date
-                { year = 2020, month = resume.Month.December }
+              resume.EndDate.Date { year = 2020, month = resume.Month.December }
           }
         , skills = [ "Blockchain", "Haskell" ]
         , bulletPoints =
@@ -40,8 +39,7 @@ let workExperience =
         , dates =
           { start = { year = 2020, month = resume.Month.January }
           , end =
-              resume.EndDate.Date
-                { year = 2020, month = resume.Month.October }
+              resume.EndDate.Date { year = 2020, month = resume.Month.October }
           }
         , skills = [ "Haskell", "Python", "Java" ]
         , bulletPoints =
@@ -58,8 +56,7 @@ let workExperience =
         , dates =
           { start = { year = 2019, month = resume.Month.September }
           , end =
-              resume.EndDate.Date
-                { year = 2019, month = resume.Month.December }
+              resume.EndDate.Date { year = 2019, month = resume.Month.December }
           }
         , skills = [ "Pure Math", "Teaching" ]
         , bulletPoints =
@@ -228,8 +225,7 @@ let education
         }
       ]
 
-in  { makeResume
-    , info
+in  { info
     , workExperience
     , summary
     , projects
