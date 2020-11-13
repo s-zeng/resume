@@ -1,20 +1,21 @@
-# Simon Zeng - Curriculum Vitae
+# Resume formats
 
-## Resume formats
+My resume is available to download in the following formats:
 
-My resume is available in the following formats:
-
-- [Markdown](https://simonzeng.com/resume/Zeng_Simon_Resume.md) (you are here!)
-- [Pretty pdf](https://simonzeng.com/resume/Zeng_Simon_Resume.pdf)
-- [Pdf for ATS](https://simonzeng.com/resume/Zeng_Simon_Resume.minimal.pdf)
+- [PDF](https://simonzeng.com/resume/Zeng_Simon_Resume.pdf)
+- [Word Document (DOCX)](https://simonzeng.com/resume/Zeng_Simon_Resume.docx)
+- [Markdown](https://simonzeng.com/resume/Zeng_Simon_Resume.md)
 
 Or consumable in the following machine-readable formats:
 
 - [Json](https://simonzeng.com/resume/Zeng_Simon_Resume.json)
 - [Yaml](https://simonzeng.com/resume/Zeng_Simon_Resume.yaml)
 - [Dhall](https://simonzeng.com/resume/Zeng_Simon_Resume.dhall)
+- [ATS-readable pdf](https://simonzeng.com/resume/Zeng_Simon_Resume.minimal.pdf)
 
-## Contact Info
+Alternatively, keep on reading for my full resume in markdown form.
+
+# Contact Info
 
 - Email: [contact@simonzeng.com](mailto:contact@simonzeng.com)
 - Phone: 1 (613) 983-9079
@@ -22,14 +23,14 @@ Or consumable in the following machine-readable formats:
 - LinkedIn: [s-zeng1](https://linkedin.com/in/s-zeng1)
 - Website: [simonzeng.com](https://simonzeng.com)
 
-## About me
+# About me
 
 - Professional experience in functional programming (Haskell, Clojure)
 - Competent core development skills (Python, Java, Ruby, Javascript)
 - Avid user and contributor of free, libre, and open source software
 - Strong background in mathematics
 
-## Work Experience
+# Work Experience
 
 ### TQ Tezos -- Software Engineering Intern (Blockchain)
 
@@ -94,13 +95,13 @@ Or consumable in the following machine-readable formats:
   - Created internal use development tools backed by Ruby on Rails and Javascript to monitor and debug specialized production systems
 
 
-## Projects
+# Projects
 
 - [dhall-python](https://github.com/s-zeng/dhall-python/): Python bindings for the Dhall configuration language
 - [board-to-latex](https://github.com/s-zeng/board-to-latex/): Turn pictures of math into latex
 - [rag-shenanigann](https://github.com/s-zeng/rag-shenanigann/): Generate ragtime music with AI
 
-## Open Source Contributions
+# Open Source Contributions
 
 - [dhall-lang/dhall-kubernetes](https://github.com/dhall-lang/dhall-kubernetes/)
   - `06ddc2d` Remove declaration of deprecated python script
@@ -110,20 +111,26 @@ Or consumable in the following machine-readable formats:
   - `4910aa7` Add support for Racket
 
 
-## Misc Experience
+# Misc Experience
 
 - Swim Instructor: Certified by Red Cross and Life Saving Society
 - Accordion Teacher: Offering private lessons
 - Camp Counsellor: For youth robotics camps
 
-## Education
+# Education
 
 - University of Waterloo (May 2022): Bachelor's degree, Computer Science
 
-## Coursework
+# Coursework
 
 - Functional Programming (Haskell, Scala, Scheme)
 - OOP Programming (C++)
 - Formal Logic and Interactive Theorem Proving (Coq)
 - Compilers and Interpreters
+
+# About this resume
+
+This resume, in all the formats it is available in, was generated
+automatically from a single configuration file. To see more about my
+process, take a look at the repo [here](https://github.com/s-zeng/resume).
 

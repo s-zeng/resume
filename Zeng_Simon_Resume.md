@@ -1,18 +1,8 @@
-# Simon Zeng - Curriculum Vitae
-
-## Resume formats
-
-My resume is available in the following formats:
-
-- [Markdown](https://simonzeng.com/resume/Zeng_Simon_Resume.md) (you are here!)
-- [Pretty pdf](https://simonzeng.com/resume/Zeng_Simon_Resume.pdf)
-- [Pdf for ATS](https://simonzeng.com/resume/Zeng_Simon_Resume.minimal.pdf)
-
-Or consumable in the following machine-readable formats:
-
-- [Json](https://simonzeng.com/resume/Zeng_Simon_Resume.json)
-- [Yaml](https://simonzeng.com/resume/Zeng_Simon_Resume.yaml)
-- [Dhall](https://simonzeng.com/resume/Zeng_Simon_Resume.dhall)
+---
+title: Resume
+author: Simon Zeng
+date: \today
+---
 
 ## Contact Info
 
@@ -21,13 +11,6 @@ Or consumable in the following machine-readable formats:
 - Github: [s-zeng](https://github.com/s-zeng)
 - LinkedIn: [s-zeng1](https://linkedin.com/in/s-zeng1)
 - Website: [simonzeng.com](https://simonzeng.com)
-
-## About me
-
-- Professional experience in functional programming (Haskell, Clojure)
-- Competent core development skills (Python, Java, Ruby, Javascript)
-- Avid user and contributor of free, libre, and open source software
-- Strong background in mathematics
 
 ## Work Experience
 
