@@ -261,7 +261,7 @@ let makeOSS =
                 contribs
 
         in  ''
-            \cvsection{OSS Contribs}
+            \cvsection{Open Source}
 
             ${textContribs}
             ''

@@ -20,6 +20,9 @@ target/index.md: target/$(RESUME_NAME).md
 target/$(RESUME_NAME).md: markdown.dhall $(DEPENDS)
 	dhall text < markdown.dhall > $@
 
+target/_config.yml: cv.dhall $(DEPENDS)
+	dhall text < jenkins.dhall > $@
+
 target/$(RESUME_NAME).pdf: $(DEPENDS) latex/Makefile $(wildcard latex/*.dhall)
 	cd latex/ && make
 	cp latex/$(RESUME_NAME).pdf target/

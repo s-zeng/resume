@@ -45,23 +45,23 @@ let miscExperience
 
 
 in  ''
-    # ${cv.info.name} - Curriculum Vitae
+    # Resume formats
 
-    ## Resume formats
+    My resume is available to download in the following formats:
 
-    My resume is available in the following formats:
-
-    - [Markdown](${baseURL}/${resumeName}.md) (you are here!)
-    - [Pretty pdf](${baseURL}/${resumeName}.pdf)
-    - [Pdf for ATS](${baseURL}/${resumeName}.minimal.pdf)
+    - [PDF](${baseURL}/${resumeName}.pdf)
+    - [Markdown](${baseURL}/${resumeName}.md)
 
     Or consumable in the following machine-readable formats:
 
     - [Json](${baseURL}/${resumeName}.json)
     - [Yaml](${baseURL}/${resumeName}.yaml)
     - [Dhall](${baseURL}/${resumeName}.dhall)
+    - [ATS-readable pdf](${baseURL}/${resumeName}.minimal.pdf)
 
-    ## Contact Info
+    Alternatively, keep on reading for my full resume in markdown form.
+
+    # Contact Info
 
     - Email: [${cv.info.email}](mailto:${cv.info.email})
     - Phone: ${cv.info.phone}
@@ -69,11 +69,11 @@ in  ''
     - LinkedIn: [${cv.socials.linkedin.userName}](${cv.socials.linkedin.baseUrl}/${cv.socials.linkedin.userName})
     - Website: [${cv.info.site}](https://${cv.info.site})
 
-    ## About me
+    # About me
 
     ${markdown.toBulletPoints 0 cv.summary}
 
-    ## Work Experience
+    # Work Experience
 
     ${Prelude.Text.concatMapSep
         "\n\n"
@@ -81,7 +81,7 @@ in  ''
         markdown.makeJob
         jobs}
 
-    ## Projects
+    # Projects
 
     ${Prelude.Text.concatMapSep
         "\n"
@@ -89,14 +89,14 @@ in  ''
         markdown.makeProject
         projects}
 
-    ## Open Source Contributions
+    # Open Source Contributions
 
     ${Prelude.Text.concatMap
         helpers.Contrib.Type
         markdown.makeContrib
         contribs}
 
-    ## Misc Experience
+    # Misc Experience
 
     ${Prelude.Text.concatMapSep
         "\n"
@@ -104,7 +104,7 @@ in  ''
         markdown.makeHighlight
         miscExperience}
 
-    ## Education
+    # Education
 
     ${Prelude.Text.concatMapSep
         "\n"
@@ -112,7 +112,7 @@ in  ''
         markdown.makeEducation
         cv.education}
 
-    ## Coursework
+    # Coursework
 
     ${markdown.toBulletPoints 0 cv.coursework}
 
