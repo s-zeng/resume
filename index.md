@@ -13,7 +13,7 @@ Or consumable in the following machine-readable formats:
 - [Dhall](https://simonzeng.com/resume/Zeng_Simon_Resume.dhall)
 - [ATS-readable pdf](https://simonzeng.com/resume/Zeng_Simon_Resume.minimal.pdf)
 
-Alternatively, keep on reading for my full resume in markdown form.
+Alternatively, keep on reading for my full resume in web form.
 
 # Contact Info
 
