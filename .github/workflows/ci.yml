@@ -36,7 +36,7 @@ jobs:
           pandoc-version: '2.7.3' # The pandoc version to download (if necessary) and use.
 
       - name: Make
-        run: "cd zeng-simon-resume && make all"
+        run: "cd zeng-simon-resume && make github"
 
       - name: Release
         uses: softprops/action-gh-release@v1

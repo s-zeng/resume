@@ -67,7 +67,7 @@ in  ''
     - [Dhall](${baseURL}/${resumeName}.dhall)
     - [ATS-readable pdf](${baseURL}/${resumeName}.minimal.pdf)
 
-    Alternatively, keep on reading for my full resume in markdown form.
+    Alternatively, keep on reading for my full resume in web form.
 
     # Contact Info
 

@@ -3,7 +3,12 @@ OUTPUT_TYPES=json yaml pdf docx md dhall minimal.pdf
 ARTIFACTS=$(foreach type,$(OUTPUT_TYPES),target/$(RESUME_NAME).$(type)) target/index.md
 DEPENDS=cv.dhall dhallResume.dhall target/
 
+.PHONY: all
 all: $(ARTIFACTS)
+
+.PHONY: github
+github: all
+	rm target/$(RESUME_NAME).md
 
 target/$(RESUME_NAME).json: $(DEPENDS)
 	dhall-to-json < cv.dhall > $@
