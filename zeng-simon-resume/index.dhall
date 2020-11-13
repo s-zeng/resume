@@ -8,6 +8,17 @@ let helpers = dhallResume.helpers
 
 let markdown = dhallResume.markdown
 
+let baseURL = "https://simonzeng.com/resume"
+
+let resumeName = "Zeng_Simon_Resume"
+
+let aboutBlurb =
+    ''
+    This resume, in all the formats it is available in, was generated
+    automatically from a single configuration file. To see more about my
+    process, take a look at the repo [here](https://github.com/s-zeng/resume).
+    ''
+
 let jobs
     : List helpers.Job.Type
     = [ cv.workExperience.`TQ Tezos`
@@ -39,14 +50,26 @@ let miscExperience
       , cv.miscExperience.counsellor
       ]
 
-in  ''
-    ---
-    title: Resume
-    author: ${cv.info.name}
-    date: \today
-    ---
 
-    ## Contact Info
+in  ''
+    # Resume formats
+
+    My resume is available to download in the following formats:
+
+    - [PDF](${baseURL}/${resumeName}.pdf)
+    - [Word Document (DOCX)](${baseURL}/${resumeName}.docx)
+    - [Markdown](${baseURL}/${resumeName}.md)
+
+    Or consumable in the following machine-readable formats:
+
+    - [Json](${baseURL}/${resumeName}.json)
+    - [Yaml](${baseURL}/${resumeName}.yaml)
+    - [Dhall](${baseURL}/${resumeName}.dhall)
+    - [ATS-readable pdf](${baseURL}/${resumeName}.minimal.pdf)
+
+    Alternatively, keep on reading for my full resume in markdown form.
+
+    # Contact Info
 
     - Email: [${cv.info.email}](mailto:${cv.info.email})
     - Phone: ${cv.info.phone}
@@ -54,11 +77,19 @@ in  ''
     - LinkedIn: [${cv.socials.linkedin.userName}](${cv.socials.linkedin.baseUrl}/${cv.socials.linkedin.userName})
     - Website: [${cv.info.site}](https://${cv.info.site})
 
-    ## Work Experience
+    # About me
 
-    ${Prelude.Text.concatMapSep "\n\n" helpers.Job.Type markdown.makeJob jobs}
+    ${markdown.toBulletPoints 0 cv.summary}
 
-    ## Projects
+    # Work Experience
+
+    ${Prelude.Text.concatMapSep
+        "\n\n"
+        helpers.Job.Type
+        markdown.makeJob
+        jobs}
+
+    # Projects
 
     ${Prelude.Text.concatMapSep
         "\n"
@@ -66,11 +97,14 @@ in  ''
         markdown.makeProject
         projects}
 
-    ## Open Source Contributions
+    # Open Source Contributions
 
-    ${Prelude.Text.concatMap helpers.Contrib.Type markdown.makeContrib contribs}
+    ${Prelude.Text.concatMap
+        helpers.Contrib.Type
+        markdown.makeContrib
+        contribs}
 
-    ## Misc Experience
+    # Misc Experience
 
     ${Prelude.Text.concatMapSep
         "\n"
@@ -78,7 +112,7 @@ in  ''
         markdown.makeHighlight
         miscExperience}
 
-    ## Education
+    # Education
 
     ${Prelude.Text.concatMapSep
         "\n"
@@ -86,8 +120,11 @@ in  ''
         markdown.makeEducation
         cv.education}
 
-    ## Coursework
+    # Coursework
 
     ${markdown.toBulletPoints 0 cv.coursework}
 
+    # About this resume
+    
+    ${aboutBlurb}
     ''

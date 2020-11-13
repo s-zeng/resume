@@ -1,7 +1,7 @@
 RESUME_NAME=Zeng_Simon_Resume
-OUTPUT_TYPES=json yaml pdf dhall minimal.pdf
+OUTPUT_TYPES=json yaml pdf docx md dhall minimal.pdf
 ARTIFACTS=$(foreach type,$(OUTPUT_TYPES),target/$(RESUME_NAME).$(type)) target/index.md
-DEPENDS=$(wildcard *.dhall) target/
+DEPENDS=cv.dhall dhallResume.dhall target/
 
 all: $(ARTIFACTS)
 
@@ -14,21 +14,24 @@ target/$(RESUME_NAME).yaml: $(DEPENDS)
 target/$(RESUME_NAME).dhall: $(DEPENDS)
 	dhall < cv.dhall > $@
 
-target/index.md: target/$(RESUME_NAME).md
-	cp target/$(RESUME_NAME).md $@
+target/index.md: index.dhall $(DEPENDS)
+	dhall text < index.dhall > $@
 
 target/$(RESUME_NAME).md: markdown.dhall $(DEPENDS)
 	dhall text < markdown.dhall > $@
 
-target/_config.yml: cv.dhall $(DEPENDS)
+target/_config.yml: jenkins.dhall $(DEPENDS)
 	dhall text < jenkins.dhall > $@
 
 target/$(RESUME_NAME).pdf: $(DEPENDS) latex/Makefile $(wildcard latex/*.dhall)
 	cd latex/ && make
 	cp latex/$(RESUME_NAME).pdf target/
 
-target/$(RESUME_NAME).minimal.pdf: lightPdf.dhall $(DEPENDS)
-	dhall text < lightPdf.dhall | pandoc -o $@ -
+target/$(RESUME_NAME).minimal.pdf: target/$(RESUME_NAME).md
+	pandoc -o $@ target/$(RESUME_NAME).md
+
+target/$(RESUME_NAME).docx: target/$(RESUME_NAME).md
+	pandoc -o $@ target/$(RESUME_NAME).md
 
 target/:
 	mkdir -p target

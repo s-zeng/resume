@@ -1,12 +1,16 @@
-# resume
+# Simon Zeng's Resume
 
 ## Download
 
-You can download my resume in the following formats, either via the following 
-links, or via the releases page in the sidebar:
+You can use the following links to download my resume in a format of your 
+choice:
 
-- [*PDF*](https://simonzeng.com/resume/Zeng_Simon_Resume.pdf)
+- [PDF](https://simonzeng.com/resume/Zeng_Simon_Resume.pdf)
+- [Word Document (DOCX)](https://simonzeng.com/resume/Zeng_Simon_Resume.docx)
 - [Markdown](https://simonzeng.com/resume/Zeng_Simon_Resume.md)
+
+In addition, my resume is available in a number of machine readable formats:
+
 - [ATS-readable PDF](https://simonzeng.com/resume/Zeng_Simon_Resume.minimal.pdf)
 - [Json](https://simonzeng.com/resume/Zeng_Simon_Resume.json)
 - [Yaml](https://simonzeng.com/resume/Zeng_Simon_Resume.yaml)

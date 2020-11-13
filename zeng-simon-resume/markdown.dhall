@@ -8,10 +8,6 @@ let helpers = dhallResume.helpers
 
 let markdown = dhallResume.markdown
 
-let baseURL = "https://simonzeng.com/resume"
-
-let resumeName = "Zeng_Simon_Resume"
-
 let jobs
     : List helpers.Job.Type
     = [ cv.workExperience.`TQ Tezos`
@@ -43,25 +39,14 @@ let miscExperience
       , cv.miscExperience.counsellor
       ]
 
-
 in  ''
-    # Resume formats
+    ---
+    title: Resume
+    author: ${cv.info.name}
+    date: \today
+    ---
 
-    My resume is available to download in the following formats:
-
-    - [PDF](${baseURL}/${resumeName}.pdf)
-    - [Markdown](${baseURL}/${resumeName}.md)
-
-    Or consumable in the following machine-readable formats:
-
-    - [Json](${baseURL}/${resumeName}.json)
-    - [Yaml](${baseURL}/${resumeName}.yaml)
-    - [Dhall](${baseURL}/${resumeName}.dhall)
-    - [ATS-readable pdf](${baseURL}/${resumeName}.minimal.pdf)
-
-    Alternatively, keep on reading for my full resume in markdown form.
-
-    # Contact Info
+    ## Contact Info
 
     - Email: [${cv.info.email}](mailto:${cv.info.email})
     - Phone: ${cv.info.phone}
@@ -69,19 +54,11 @@ in  ''
     - LinkedIn: [${cv.socials.linkedin.userName}](${cv.socials.linkedin.baseUrl}/${cv.socials.linkedin.userName})
     - Website: [${cv.info.site}](https://${cv.info.site})
 
-    # About me
+    ## Work Experience
 
-    ${markdown.toBulletPoints 0 cv.summary}
+    ${Prelude.Text.concatMapSep "\n\n" helpers.Job.Type markdown.makeJob jobs}
 
-    # Work Experience
-
-    ${Prelude.Text.concatMapSep
-        "\n\n"
-        helpers.Job.Type
-        markdown.makeJob
-        jobs}
-
-    # Projects
+    ## Projects
 
     ${Prelude.Text.concatMapSep
         "\n"
@@ -89,14 +66,11 @@ in  ''
         markdown.makeProject
         projects}
 
-    # Open Source Contributions
+    ## Open Source Contributions
 
-    ${Prelude.Text.concatMap
-        helpers.Contrib.Type
-        markdown.makeContrib
-        contribs}
+    ${Prelude.Text.concatMap helpers.Contrib.Type markdown.makeContrib contribs}
 
-    # Misc Experience
+    ## Misc Experience
 
     ${Prelude.Text.concatMapSep
         "\n"
@@ -104,7 +78,7 @@ in  ''
         markdown.makeHighlight
         miscExperience}
 
-    # Education
+    ## Education
 
     ${Prelude.Text.concatMapSep
         "\n"
@@ -112,7 +86,7 @@ in  ''
         markdown.makeEducation
         cv.education}
 
-    # Coursework
+    ## Coursework
 
     ${markdown.toBulletPoints 0 cv.coursework}
 
