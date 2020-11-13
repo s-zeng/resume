@@ -26,30 +26,25 @@ exclude:
 plugins:
 - jekyll-sitemap
 - jekyll-mentions
-- jekyll-paginate
 - jekyll-seo-tag
 - jekyll-redirect-from
 - jekyll-feed
 - jekyll-commonmark
 - jekyll-include-cache
+- jekyll-remote-theme
 - jemoji
 
 # 3. Gem settings
-paginate: 2 # jekyll-paginate > items per page
-paginate_path: blog/page:num # jekyll-paginate > blog page
-jekyll-mentions: https://twitter.com # jekyll-mentions > service used when @replying
-# twitter:
-#   username: DavidDarnes # jekyll-seo-tag > Owners twitter username
 author: Simon Zeng # jekyll-seo-tag > default author
 social: # jekyll-seo-tag > social overrides
   name: Simon Zeng # jekyll-seo-tag > real name
   links:  # jekyll-seo-tag > social aliases (sameAs)
     - https://www.linkedin.com/in/s-zeng1
     - https://github.com/s-zeng
-# markdown: CommonMark # Markdown parse settings, CommonMark performs slightly better an others in build time
-# commonmark:
-  # options: ["SMART", "FOOTNOTES"]
-  # extensions: ["strikethrough", "autolink", "table"]
+markdown: CommonMark # Markdown parse settings, CommonMark performs slightly better an others in build time
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table"]
 
 # 4. Jekyll settings
 sass:
@@ -145,4 +140,4 @@ sharing_links: # Appear at the bottom of single blog posts, add as desired. The 
   Email: true
 
 
-theme: jekyll-theme-leap-day
+remote_theme: daviddarnes/alembic
