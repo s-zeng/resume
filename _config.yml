@@ -90,7 +90,7 @@ title: "Simon Zeng - Resume" # Site name or title, also used in jekyll-seo-tag
 # logo: "/assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
 description: "3rd Computer Science student seeking Summer 2021 internships" # Site description and default description, also used in jekyll-seo-tag
 url: "https://simonzeng.com/resume/" # Site url, also used in jekyll-seo-tag
-baseurl: "https://simonzeng.com"
+baseurl: ""
 repo: "https://github.com/s-zeng/resume"
 email: "contact@simonzeng.com"
 # disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
