@@ -7,7 +7,7 @@ choice:
 
 - [PDF](https://simonzeng.com/resume/Zeng_Simon_Resume.pdf)
 - [Word Document (DOCX)](https://simonzeng.com/resume/Zeng_Simon_Resume.docx)
-- [Markdown](https://simonzeng.com/resume/Zeng_Simon_Resume.md)
+- [Markdown](https://simonzeng.com/resume/index.md)
 
 In addition, my resume is available in a number of machine readable formats:
 

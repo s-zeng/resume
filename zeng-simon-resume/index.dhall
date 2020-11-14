@@ -58,7 +58,7 @@ in  ''
 
     - [PDF](${baseURL}/${resumeName}.pdf)
     - [Word Document (DOCX)](${baseURL}/${resumeName}.docx)
-    - [Markdown](${baseURL}/${resumeName}.md)
+    - [Markdown](${baseURL}/index.md)
 
     Or consumable in the following machine-readable formats:
 
