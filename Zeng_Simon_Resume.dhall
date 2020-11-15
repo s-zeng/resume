@@ -38,7 +38,7 @@
       { author = "nvim-lua"
       , blurb = "Neovim fuzzy finder in pure lua"
       , skills = [ "Lua", "Vim Script" ]
-      , title = "telescope-nvim"
+      , title = "telescope.nvim"
       }
     }
   }

@@ -51,7 +51,7 @@
           "Lua",
           "Vim Script"
         ],
-        "title": "telescope-nvim"
+        "title": "telescope.nvim"
       }
     }
   },

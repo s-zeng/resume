@@ -34,7 +34,7 @@ contribs:
       skills:
         - Lua
         - Vim Script
-      title: telescope-nvim
+      title: telescope.nvim
 coursework:
   - "Functional Programming (Haskell, Scala, Scheme)"
   - "OOP Programming (C++)"
