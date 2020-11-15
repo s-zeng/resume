@@ -69,6 +69,10 @@ in  ''
 
     Alternatively, keep on reading for my full resume in web form.
 
+    # About this resume
+    
+    ${aboutBlurb}
+
     # Contact Info
 
     - Email: [${cv.info.email}](mailto:${cv.info.email})
@@ -123,8 +127,4 @@ in  ''
     # Coursework
 
     ${markdown.toBulletPoints 0 cv.coursework}
-
-    # About this resume
-    
-    ${aboutBlurb}
     ''

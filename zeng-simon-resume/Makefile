@@ -1,7 +1,7 @@
 RESUME_NAME=Zeng_Simon_Resume
 OUTPUT_TYPES=json yaml pdf docx md dhall minimal.pdf
 ARTIFACTS=$(foreach type,$(OUTPUT_TYPES),target/$(RESUME_NAME).$(type)) target/index.md target/_config.yml
-DEPENDS=cv.dhall dhallResume.dhall target/
+DEPENDS=cv.dhall dhallResume.dhall | target/
 
 .PHONY: all
 all: $(ARTIFACTS)
