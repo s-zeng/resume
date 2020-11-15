@@ -12,12 +12,17 @@ let baseURL = "https://simonzeng.com/resume"
 
 let resumeName = "Zeng_Simon_Resume"
 
+let source =
+      env:GITHUB_REF as Text ? "commit ${env:GITHUB_SHA as Text}" ? "source"
+
 let aboutBlurb =
-    ''
-    This resume, in all the formats it is available in, was generated
-    automatically from a single configuration file. To see more about my
-    process, take a look at the repo [here](https://github.com/s-zeng/resume).
-    ''
+      ''
+      This resume, in all the formats it is available in, was generated
+      automatically from a single configuration file. To see more about my
+      process, take a look at the repo [here](https://github.com/s-zeng/resume).
+
+      This version of the resume is built from ${source}.
+      ''
 
 let jobs
     : List helpers.Job.Type
@@ -50,7 +55,6 @@ let miscExperience
       , cv.miscExperience.counsellor
       ]
 
-
 in  ''
     # Resume formats
 
@@ -70,7 +74,7 @@ in  ''
     Alternatively, keep on reading for my full resume in web form.
 
     # About this resume
-    
+
     ${aboutBlurb}
 
     # Contact Info
@@ -87,11 +91,7 @@ in  ''
 
     # Work Experience
 
-    ${Prelude.Text.concatMapSep
-        "\n\n"
-        helpers.Job.Type
-        markdown.makeJob
-        jobs}
+    ${Prelude.Text.concatMapSep "\n\n" helpers.Job.Type markdown.makeJob jobs}
 
     # Projects
 
@@ -103,10 +103,7 @@ in  ''
 
     # Open Source Contributions
 
-    ${Prelude.Text.concatMap
-        helpers.Contrib.Type
-        markdown.makeContrib
-        contribs}
+    ${Prelude.Text.concatMap helpers.Contrib.Type markdown.makeContrib contribs}
 
     # Misc Experience
 
