@@ -162,7 +162,7 @@ let contribs =
       , `telescope.nvim` = resume.Contrib::{
         , project = resume.Project::{
           , author = "nvim-lua"
-          , title = "telescope-nvim"
+          , title = "telescope.nvim"
           , skills = [ "Lua", "Vim Script" ]
           , blurb = "Neovim fuzzy finder in pure lua"
           }
