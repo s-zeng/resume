@@ -15,6 +15,15 @@ Or consumable in the following machine-readable formats:
 
 Alternatively, keep on reading for my full resume in web form.
 
+# About this resume
+
+This resume, in all the formats it is available in, was generated
+automatically from a single configuration file. To see more about my
+process, take a look at the repo [here](https://github.com/s-zeng/resume).
+
+This version of the resume is built from refs/tags/2020-11-15.0.
+
+
 # Contact Info
 
 - Email: [contact@simonzeng.com](mailto:contact@simonzeng.com)
@@ -127,10 +136,3 @@ Alternatively, keep on reading for my full resume in web form.
 - OOP Programming (C++)
 - Formal Logic and Interactive Theorem Proving (Coq)
 - Compilers and Interpreters
-
-# About this resume
-
-This resume, in all the formats it is available in, was generated
-automatically from a single configuration file. To see more about my
-process, take a look at the repo [here](https://github.com/s-zeng/resume).
-
