@@ -153,8 +153,8 @@ let contribs =
           }
         , commits =
           [ resume.Commit::{
-            , longHash = "06ddc2d375b29ffb7fde1f47fca5c7c362347d2c"
-            , shortHash = "06ddc2d"
+            , longHash = "3367b683fa6ba3658719d6c1ac0cc043fd82f650"
+            , shortHash = "3367b68"
             , blurb = "Remove declaration of deprecated python script"
             }
           ]
