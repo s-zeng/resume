@@ -21,7 +21,7 @@ This resume, in all the formats it is available in, was generated
 automatically from a single configuration file. To see more about my
 process, take a look at the repo [here](https://github.com/s-zeng/resume).
 
-This version of the resume is built from refs/tags/2020-11-15.1.
+This version of the resume is built from refs/tags/2020-11-18.0.
 
 
 # Contact Info
@@ -106,14 +106,14 @@ This version of the resume is built from refs/tags/2020-11-15.1.
 
 # Projects
 
-- [dhall-python](https://github.com/s-zeng/dhall-python/): Python bindings for the Dhall configuration language
+- [dhall-python](https://github.com/s-zeng/dhall-python/): Python bindings for Dhall, a functional configuration language
 - [board-to-latex](https://github.com/s-zeng/board-to-latex/): Turn pictures of math into latex
 - [rag-shenanigann](https://github.com/s-zeng/rag-shenanigann/): Generate ragtime music with AI
 
 # Open Source Contributions
 
 - [dhall-lang/dhall-kubernetes](https://github.com/dhall-lang/dhall-kubernetes/)
-  - `06ddc2d` Remove declaration of deprecated python script
+  - `3367b68` Remove declaration of deprecated python script
 - [nvim-lua/telescope.nvim](https://github.com/nvim-lua/telescope.nvim/)
   - `59ef37d` Implement shortcut to dynamically use other telescopes
 - [ujihisa/repl.vim](https://github.com/ujihisa/repl.vim/)

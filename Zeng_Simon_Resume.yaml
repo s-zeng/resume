@@ -2,8 +2,8 @@ contribs:
   dhall-kubernetes:
     commits:
       - blurb: Remove declaration of deprecated python script
-        longHash: "06ddc2d375b29ffb7fde1f47fca5c7c362347d2c"
-        shortHash: "06ddc2d"
+        longHash: "3367b683fa6ba3658719d6c1ac0cc043fd82f650"
+        shortHash: "3367b68"
     project:
       author: dhall-lang
       blurb: Dhall bindings to kubernetes
@@ -84,7 +84,7 @@ projects:
     title: board-to-latex
   dhall-python:
     author: s-zeng
-    blurb: Python bindings for the Dhall configuration language
+    blurb: "Python bindings for Dhall, a functional configuration language"
     skills:
       - Rust
       - Python
