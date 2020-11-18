@@ -139,7 +139,7 @@ let projects =
         , author = "s-zeng"
         , title = "dhall-python"
         , skills = [ "Rust", "Python", "Dhall" ]
-        , blurb = "Python bindings for the Dhall configuration language"
+        , blurb = "Python bindings for Dhall, a functional configuration language"
         }
       }
 
