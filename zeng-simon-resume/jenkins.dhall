@@ -7,7 +7,7 @@ in  ''
     author: ${cv.info.name}
     description: ${blurb}
     email: ${cv.info.email}
-    url: "https://${cv.info.site}/resume"
+    url: "https://${cv.info.site}"
 
     plugins:
       - jekyll-feed
