@@ -4,11 +4,17 @@ ARTIFACTS=$(foreach type,$(OUTPUT_TYPES),target/$(RESUME_NAME).$(type)) target/i
 DEPENDS=cv.dhall dhallResume.dhall | target/
 
 .PHONY: all
-all: $(ARTIFACTS)
+all: $(ARTIFACTS) bullets
 
 .PHONY: github
-github: all
+github: $(ARTIFACTS)
 	rm target/$(RESUME_NAME).md
+
+.PHONY: bullets
+bullets: target/copiable_bulletpoints.txt
+
+target/copiable_bulletpoints.txt: justJobs.dhall $(DEPENDS)
+	dhall text < justJobs.dhall > $@
 
 target/$(RESUME_NAME).json: $(DEPENDS)
 	dhall-to-json < cv.dhall > $@
