@@ -27,7 +27,8 @@ let projects
 
 let contribs
     : List helpers.Contrib.Type
-    = [ cv.contribs.dhall-kubernetes
+    = [ cv.contribs.dhall-lang
+      , cv.contribs.dhall-kubernetes
       , cv.contribs.`telescope.nvim`
       , cv.contribs.`repl.vim`
       ]

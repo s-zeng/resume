@@ -139,7 +139,8 @@ let projects =
         , author = "s-zeng"
         , title = "dhall-python"
         , skills = [ "Rust", "Python", "Dhall" ]
-        , blurb = "Python bindings for Dhall, a functional configuration language"
+        , blurb =
+            "Python bindings for Dhall, a functional configuration language"
         }
       }
 
@@ -186,6 +187,21 @@ let contribs =
             , longHash = "4910aa7d7b0c7abda92dcfdb4cde030fb839091d"
             , shortHash = "4910aa7"
             , blurb = "Add support for Racket"
+            }
+          ]
+        }
+      , dhall-lang = resume.Contrib::{
+        , project = resume.Project::{
+          , author = "dhall-lang"
+          , title = "dhall-lang"
+          , skills = [ "Dhall", "Haskell" ]
+          , blurb = "Maintainable configuration files"
+          }
+        , commits =
+          [ resume.Commit::{
+            , longHash = "b22cce186791bc3f4bd6b6808033adf86f30af6d"
+            , shortHash = "b22cce1"
+            , blurb = "Update stale code to Dhall v19 standards"
             }
           ]
         }
