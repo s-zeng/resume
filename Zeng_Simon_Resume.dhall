@@ -13,6 +13,20 @@
       , title = "dhall-kubernetes"
       }
     }
+  , dhall-lang =
+    { commits =
+      [ { blurb = "Update stale code to Dhall v19 standards"
+        , longHash = "b22cce186791bc3f4bd6b6808033adf86f30af6d"
+        , shortHash = "b22cce1"
+        }
+      ]
+    , project =
+      { author = "dhall-lang"
+      , blurb = "Maintainable configuration files"
+      , skills = [ "Dhall", "Haskell" ]
+      , title = "dhall-lang"
+      }
+    }
   , `repl.vim` =
     { commits =
       [ { blurb = "Add support for Racket"
