@@ -27,6 +27,7 @@ jobs:
 
       - name: Install xelatex
         run: |
+          sudo apt-get update
           sudo apt-get install texlive-xetex
           sudo apt-get install texlive-fonts-extra
           sudo apt-get install fonts-font-awesome
