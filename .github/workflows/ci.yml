@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v2.3.4
         with:
           persist-credentials: false
 
@@ -27,6 +27,7 @@ jobs:
 
       - name: Install xelatex
         run: |
+          sudo apt-get update
           sudo apt-get install texlive-xetex
           sudo apt-get install texlive-fonts-extra
           sudo apt-get install fonts-font-awesome
