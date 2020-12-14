@@ -205,6 +205,21 @@ let contribs =
             }
           ]
         }
+      , nvim-tree = resume.Contrib::{
+        , project = resume.Project::{
+          , author = "kyazdani42"
+          , title = "nvim-tree.lua"
+          , skills = [ "Lua", "Vimscript" ]
+          , blurb = "A fast file explorer tree for neovim"
+          }
+        , commits =
+          [ resume.Commit::{
+            , longHash = "9aa8be639d4daad4f80552bc48a412efae7fbe4e"
+            , shortHash = "9aa8be6"
+            , blurb = "Fix null pointer crash from glibc bug"
+            }
+          ]
+        }
       }
 
 let miscExperience =
