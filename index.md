@@ -21,7 +21,7 @@ This resume, in all the formats it is available in, was generated
 automatically from a single configuration file. To see more about my
 process, take a look at the repo [here](https://github.com/s-zeng/resume).
 
-This version of the resume is built from refs/tags/2020-11-23.0.
+This version of the resume is built from refs/tags/2020-12-15.0.
 
 
 # Contact Info
@@ -112,6 +112,8 @@ This version of the resume is built from refs/tags/2020-11-23.0.
 
 # Open Source Contributions
 
+- [kyazdani42/nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua/)
+  - `9aa8be6` Fix null pointer crash from glibc bug
 - [dhall-lang/dhall-lang](https://github.com/dhall-lang/dhall-lang/)
   - `b22cce1` Update stale code to Dhall v19 standards
 - [dhall-lang/dhall-kubernetes](https://github.com/dhall-lang/dhall-kubernetes/)
