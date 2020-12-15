@@ -44,8 +44,10 @@ let miscExperience
 in  ''
     ---
     title: Resume
+    subtitle: Software Engineer
     author: ${cv.info.name}
     date: \today
+    geometry: margin=2.5cm
     ---
 
     ## Contact Info
