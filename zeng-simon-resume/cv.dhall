@@ -34,6 +34,18 @@ let workExperience =
           , "Constructed peer-to-peer staking topology monitoring and visualization infrastructure with Python"
           ]
         }
+      , Tesla2 = resume.Job::{
+        , company = "Tesla"
+        , title = resume.sweIntern "Firmware Tooling"
+        , location = "Remote"
+        , dates =
+          { start = { year = 2021, month = resume.Month.May }
+          , end =
+              resume.EndDate.Date { year = 2021, month = resume.Month.August }
+          }
+        , skills = [ "Haskell", "Firmware" ]
+        , bulletPoints = [] : List Text
+        }
       , Tesla = resume.Job::{
         , company = "Tesla"
         , title = resume.sweIntern "Firmware Tooling"

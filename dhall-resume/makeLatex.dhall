@@ -78,17 +78,24 @@ let makeSkills =
 
 let formatJob =
       λ(job : helpers.Job.Type) →
-        ''
-        \job{${job.company}}
-            {${job.title}}
-            {${makeSkills job.skills}}
-            {${helpers.makeDates job.dates}}
-            {${job.location}}
+        let jobBody =
+              if    Prelude.List.null Text job.bulletPoints
+              then  "\\vspace{-\\topsep}"
+              else  ''
+                    \begin{tightitemize}
+                        ${makeItems job.bulletPoints}
+                    \end{tightitemize}
+                    ''
 
-        \begin{tightitemize}
-            ${makeItems job.bulletPoints}
-        \end{tightitemize}
-        ''
+        in  ''
+            \job{${job.company}}
+                {${job.title}}
+                {${makeSkills job.skills}}
+                {${helpers.makeDates job.dates}}
+                {${job.location}}
+
+            ${jobBody}
+            ''
 
 let makeHeader =
       λ(options : Options.Type) →
@@ -173,6 +180,8 @@ let makeExperience =
             % \AtBeginEnvironment{itemize}{\small}
 
             \cvsection[sidebar]{Experience}
+
+            \smallskip
 
             ${makeJobs experience}
                   ''

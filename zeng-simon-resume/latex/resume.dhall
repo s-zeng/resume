@@ -2,9 +2,13 @@ let cv = ../cv.dhall
 
 let makeResume = ../dhallResume.dhall
 
+let Prelude = makeResume.Prelude
+
 let latex = makeResume.latex
 
 let experience = cv.workExperience
+
+let Job = makeResume.helpers.Job
 
 let options =
       latex.Options::{
@@ -23,21 +27,34 @@ let options =
       }
 
 let jobs
-    : List makeResume.helpers.Job.Type
-    = [ experience.`TQ Tezos`
-      ,     experience.Tesla
-        //  { bulletPoints =
-              [ "Developed and maintained large Haskell code base responsible for automated firmware documentation, code, and signal generation"
-              , "Improved Haskell products' performance and runtimes by over 20\\% by identifying laziness-related space leaks and rewriting hot code paths"
-              , "Responsible for design and implementation of firmware verification infrastructure employed by entire organization"
-              , "Designed and developed robust firmware signal inspection architecture with Java and modern statically typed Python"
-              ]
-            }
-      , experience.`University of Waterloo`
-      , experience.Ericsson
-      , experience.CENX
-      , experience.`inBay Technologies`
-      ]
+    : List Job.Type
+    = let dropPoints =
+            \(n : Natural) ->
+            \(job : Job.Type) ->
+                  job
+              //  { bulletPoints = Prelude.List.drop n Text job.bulletPoints }
+
+      let takePoints =
+            \(n : Natural) ->
+            \(job : Job.Type) ->
+                  job
+              //  { bulletPoints = Prelude.List.take n Text job.bulletPoints }
+
+      in  [ experience.Tesla2
+          , experience.`TQ Tezos`
+          ,     experience.Tesla
+            //  { bulletPoints =
+                  [ "Developed and maintained large Haskell code base responsible for automated firmware documentation, code, and signal generation"
+                  , "Improved Haskell products' performance and runtimes by over 20\\% by identifying laziness-related space leaks and rewriting hot code paths"
+                  , "Responsible for design and implementation of firmware verification infrastructure employed by entire organization"
+                  , "Designed and developed robust firmware signal inspection architecture with Java and modern statically typed Python"
+                  ]
+                }
+          , takePoints 1 experience.`University of Waterloo`
+          , experience.Ericsson
+          , dropPoints 1 experience.CENX
+          , dropPoints 1 experience.`inBay Technologies`
+          ]
 
 let sep =
       ''

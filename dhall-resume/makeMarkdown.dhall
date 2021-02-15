@@ -14,15 +14,22 @@ let toBulletPoints =
 
 let makeJob =
       λ(job : helpers.Job.Type) →
-        ''
-        ### ${job.company} -- ${job.title}
+        let description =
+              if    Prelude.List.null Text job.bulletPoints
+              then  ""
+              else  ''
+                    - Description:
+                    ${toBulletPoints 2 job.bulletPoints}
+                    ''
 
-        - Date: ${helpers.makeDates job.dates}
-        - Location: ${job.location}
-        - Skills: ${Prelude.Text.concatSep ", " job.skills}
-        - Description:
-        ${toBulletPoints 2 job.bulletPoints}
-        ''
+        in  ''
+            ### ${job.company} -- ${job.title}
+
+            - Date: ${helpers.makeDates job.dates}
+            - Location: ${job.location}
+            - Skills: ${Prelude.Text.concatSep ", " job.skills}
+            ${description}
+            ''
 
 let makeProject =
       λ(project : helpers.Project.Type) →

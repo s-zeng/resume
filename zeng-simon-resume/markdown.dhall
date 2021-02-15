@@ -10,7 +10,8 @@ let markdown = dhallResume.markdown
 
 let jobs
     : List helpers.Job.Type
-    = [ cv.workExperience.`TQ Tezos`
+    = [ cv.workExperience.Tesla2
+      , cv.workExperience.`TQ Tezos`
       , cv.workExperience.Tesla
       , cv.workExperience.`University of Waterloo`
       , cv.workExperience.Ericsson
