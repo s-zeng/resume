@@ -21,7 +21,7 @@ This resume, in all the formats it is available in, was generated
 automatically from a single configuration file. To see more about my
 process, take a look at the repo [here](https://github.com/s-zeng/resume).
 
-This version of the resume is built from refs/tags/2021-02-09.0.
+This version of the resume is built from refs/tags/2021-02-15.0.
 
 
 # Contact Info
@@ -41,6 +41,14 @@ This version of the resume is built from refs/tags/2021-02-09.0.
 
 # Work Experience
 
+### Tesla -- Software Engineering Intern (Firmware Tooling)
+
+- Date: May 2021 -- Aug 2021
+- Location: Remote
+- Skills: Haskell, Firmware
+
+
+
 ### TQ Tezos -- Software Engineering Intern (Blockchain)
 
 - Date: Sep 2020 -- Dec 2020
@@ -50,6 +58,7 @@ This version of the resume is built from refs/tags/2021-02-09.0.
   - Authored Tezos smart contracts in a Haskell EDSL to automate proprietary applications for permissioned blockchains
   - Converted large and fragmented Python-based Tezos Kubernetes deployment to idiomatic Dhall, greatly improving readability and maintainability
   - Constructed peer-to-peer staking topology monitoring and visualization infrastructure with Python
+
 
 
 ### Tesla -- Software Engineering Intern (Firmware Tooling)
@@ -64,6 +73,7 @@ This version of the resume is built from refs/tags/2021-02-09.0.
   - Designed and developed robust firmware signal inspection architecture with Java and modern statically typed Python
 
 
+
 ### University of Waterloo -- Teaching Assistant (Algebra)
 
 - Date: Sep 2019 -- Dec 2019
@@ -74,6 +84,7 @@ This version of the resume is built from refs/tags/2021-02-09.0.
   - Prepared individual tutoring lesson plans to ameliorate understanding in advanced topics such as quadratic reciprocity or interactive theorem proving
 
 
+
 ### Ericsson -- Software Engineering Intern (Performance)
 
 - Date: May 2019 -- Aug 2019
@@ -82,6 +93,7 @@ This version of the resume is built from refs/tags/2021-02-09.0.
 - Description:
   - Developed pure functional Clojure metrics infrastructure to monitor complex JVM architectures, allowing for discovery of multiple performance issues
   - Implemented a parser and interpreter for an internally designed performance-testing DSL
+
 
 
 ### CENX -- Software Engineering Intern (Test Automation)
@@ -95,6 +107,7 @@ This version of the resume is built from refs/tags/2021-02-09.0.
   - Discovered and provided patches for multiple security issues, including cryptography weaknesses, via automated fuzzing
 
 
+
 ### inBay Technologies -- Software Engineering Intern (Full Stack)
 
 - Date: Jul 2016 -- Aug 2016
@@ -102,6 +115,7 @@ This version of the resume is built from refs/tags/2021-02-09.0.
 - Skills: Ruby, Rails, Javascript
 - Description:
   - Created internal use development tools backed by Ruby on Rails and Javascript to monitor and debug specialized production systems
+
 
 
 # Projects

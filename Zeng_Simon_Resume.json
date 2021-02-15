@@ -288,6 +288,26 @@
       ],
       "title": "Software Engineering Intern (Firmware Tooling)"
     },
+    "Tesla2": {
+      "bulletPoints": [],
+      "company": "Tesla",
+      "dates": {
+        "end": {
+          "month": "August",
+          "year": 2021
+        },
+        "start": {
+          "month": "May",
+          "year": 2021
+        }
+      },
+      "location": "Remote",
+      "skills": [
+        "Haskell",
+        "Firmware"
+      ],
+      "title": "Software Engineering Intern (Firmware Tooling)"
+    },
     "University of Waterloo": {
       "bulletPoints": [
         "Tutored classes of over 1000 students in number theory and abstract algebra",

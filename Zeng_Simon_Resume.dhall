@@ -426,6 +426,68 @@
     , skills = [ "Haskell", "Python", "Java" ]
     , title = "Software Engineering Intern (Firmware Tooling)"
     }
+  , Tesla2 =
+    { bulletPoints = [] : List Text
+    , company = "Tesla"
+    , dates =
+      { end =
+          < Current
+          | Date :
+              { month :
+                  < April
+                  | August
+                  | December
+                  | February
+                  | January
+                  | July
+                  | June
+                  | March
+                  | May
+                  | November
+                  | October
+                  | September
+                  >
+              , year : Natural
+              }
+          >.Date
+            { month =
+                < April
+                | August
+                | December
+                | February
+                | January
+                | July
+                | June
+                | March
+                | May
+                | November
+                | October
+                | September
+                >.August
+            , year = 2021
+            }
+      , start =
+        { month =
+            < April
+            | August
+            | December
+            | February
+            | January
+            | July
+            | June
+            | March
+            | May
+            | November
+            | October
+            | September
+            >.May
+        , year = 2021
+        }
+      }
+    , location = "Remote"
+    , skills = [ "Haskell", "Firmware" ]
+    , title = "Software Engineering Intern (Firmware Tooling)"
+    }
   , `University of Waterloo` =
     { bulletPoints =
       [ "Tutored classes of over 1000 students in number theory and abstract algebra"
