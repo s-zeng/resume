@@ -53,7 +53,7 @@ let workExperience =
         , dates =
           { start = { year = 2020, month = resume.Month.January }
           , end =
-              resume.EndDate.Date { year = 2020, month = resume.Month.October }
+              resume.EndDate.Date { year = 2020, month = resume.Month.August }
           }
         , skills = [ "Haskell", "Python", "Java" ]
         , bulletPoints =
