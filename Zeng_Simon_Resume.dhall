@@ -296,7 +296,7 @@
   , `TQ Tezos` =
     { bulletPoints =
       [ "Authored Tezos smart contracts in a Haskell EDSL to automate proprietary applications for permissioned blockchains"
-      , "Converted large and fragmented Python-based Tezos Kubernetes deployment to idiomatic Dhall, greatly improving readability and maintainability"
+      , "Converted fragmented Python-based Tezos Kubernetes deployment script to idiomatic Dhall, greatly improving readability and maintainability"
       , "Constructed peer-to-peer staking topology monitoring and visualization infrastructure with Python"
       ]
     , company = "TQ Tezos"
@@ -401,7 +401,7 @@
                 | November
                 | October
                 | September
-                >.October
+                >.August
             , year = 2020
             }
       , start =
@@ -427,7 +427,11 @@
     , title = "Software Engineering Intern (Firmware Tooling)"
     }
   , Tesla2 =
-    { bulletPoints = [] : List Text
+    { bulletPoints =
+      [ "Continued development work on Haskell firmware tooling code base"
+      , "Implemented network scheduler for custom Cybertruck communications protocols in Haskell using novel functional techniques"
+      , "Designed and implemented C API code generation tools for embedded real-time vehicle transmissions in the Cybertruck"
+      ]
     , company = "Tesla"
     , dates =
       { end =
@@ -485,7 +489,7 @@
         }
       }
     , location = "Remote"
-    , skills = [ "Haskell", "Firmware" ]
+    , skills = [ "Haskell", "Firmware", "C" ]
     , title = "Software Engineering Intern (Firmware Tooling)"
     }
   , `University of Waterloo` =

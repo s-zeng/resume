@@ -21,7 +21,7 @@ This resume, in all the formats it is available in, was generated
 automatically from a single configuration file. To see more about my
 process, take a look at the repo [here](https://github.com/s-zeng/resume).
 
-This version of the resume is built from refs/tags/2021-02-15.0.
+This version of the resume is built from refs/tags/2021-06-17.0.
 
 
 # Contact Info
@@ -45,7 +45,11 @@ This version of the resume is built from refs/tags/2021-02-15.0.
 
 - Date: May 2021 -- Aug 2021
 - Location: Remote
-- Skills: Haskell, Firmware
+- Skills: Haskell, Firmware, C
+- Description:
+  - Continued development work on Haskell firmware tooling code base
+  - Implemented network scheduler for custom Cybertruck communications protocols in Haskell using novel functional techniques
+  - Designed and implemented C API code generation tools for embedded real-time vehicle transmissions in the Cybertruck
 
 
 
@@ -56,14 +60,14 @@ This version of the resume is built from refs/tags/2021-02-15.0.
 - Skills: Blockchain, Haskell
 - Description:
   - Authored Tezos smart contracts in a Haskell EDSL to automate proprietary applications for permissioned blockchains
-  - Converted large and fragmented Python-based Tezos Kubernetes deployment to idiomatic Dhall, greatly improving readability and maintainability
+  - Converted fragmented Python-based Tezos Kubernetes deployment script to idiomatic Dhall, greatly improving readability and maintainability
   - Constructed peer-to-peer staking topology monitoring and visualization infrastructure with Python
 
 
 
 ### Tesla -- Software Engineering Intern (Firmware Tooling)
 
-- Date: Jan 2020 -- Oct 2020
+- Date: Jan 2020 -- Aug 2020
 - Location: Palo Alto, California
 - Skills: Haskell, Python, Java
 - Description:
