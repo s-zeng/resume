@@ -30,7 +30,7 @@ let workExperience =
         , skills = [ "Blockchain", "Haskell" ]
         , bulletPoints =
           [ "Authored Tezos smart contracts in a Haskell EDSL to automate proprietary applications for permissioned blockchains"
-          , "Converted large and fragmented Python-based Tezos Kubernetes deployment to idiomatic Dhall, greatly improving readability and maintainability"
+          , "Converted fragmented Python-based Tezos Kubernetes deployment script to idiomatic Dhall, greatly improving readability and maintainability"
           , "Constructed peer-to-peer staking topology monitoring and visualization infrastructure with Python"
           ]
         }
@@ -43,8 +43,12 @@ let workExperience =
           , end =
               resume.EndDate.Date { year = 2021, month = resume.Month.August }
           }
-        , skills = [ "Haskell", "Firmware" ]
-        , bulletPoints = [] : List Text
+        , skills = [ "Haskell", "Firmware", "C" ]
+        , bulletPoints =
+          [ "Continued development work on Haskell firmware tooling code base"
+          , "Implemented network scheduler for custom Cybertruck communications protocols in Haskell using novel functional techniques"
+          , "Designed and implemented C API code generation tools for embedded real-time vehicle transmissions in the Cybertruck"
+          ]
         }
       , Tesla = resume.Job::{
         , company = "Tesla"

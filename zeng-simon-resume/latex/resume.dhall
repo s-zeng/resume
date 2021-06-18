@@ -47,10 +47,9 @@ let jobs
                   [ "Developed and maintained large Haskell code base responsible for automated firmware documentation, code, and signal generation"
                   , "Improved Haskell products' performance and runtimes by over 20\\% by identifying laziness-related space leaks and rewriting hot code paths"
                   , "Responsible for design and implementation of firmware verification infrastructure employed by entire organization"
-                  , "Designed and developed robust firmware signal inspection architecture with Java and modern statically typed Python"
                   ]
                 }
-          , takePoints 1 experience.`University of Waterloo`
+          , takePoints 0 experience.`University of Waterloo`
           , experience.Ericsson
           , dropPoints 1 experience.CENX
           , dropPoints 1 experience.`inBay Technologies`
