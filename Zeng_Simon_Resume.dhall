@@ -552,7 +552,7 @@
     , project =
       { author = "kyazdani42"
       , blurb = "A fast file explorer tree for neovim"
-      , skills = [ "Lua", "Vimscript" ]
+      , skills = [ "Lua", "Vim Script" ]
       , title = "nvim-tree.lua"
       }
     }

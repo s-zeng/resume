@@ -167,7 +167,7 @@ contribs:
       blurb: A fast file explorer tree for neovim
       skills:
         - Lua
-        - Vimscript
+        - Vim Script
       title: nvim-tree.lua
   repl.vim:
     commits:
