@@ -544,7 +544,7 @@
     }
   , nvim-tree =
     { commits =
-      [ { blurb = "Fix null pointer crash from glibc bug"
+      [ { blurb = "Fix crash from glibc bug"
         , longHash = "9aa8be639d4daad4f80552bc48a412efae7fbe4e"
         , shortHash = "9aa8be6"
         }
