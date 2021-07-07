@@ -256,7 +256,7 @@ let contribs =
           [ resume.Commit::{
             , longHash = "9aa8be639d4daad4f80552bc48a412efae7fbe4e"
             , shortHash = "9aa8be6"
-            , blurb = "Fix null pointer crash from glibc bug"
+            , blurb = "Fix crash from glibc bug"
             }
           ]
         }

@@ -17,7 +17,7 @@ let sidebar
         , latex.sidebar.makeOSS
             latex.skips.smallDivider
             [ cv.contribs.`telescope.nvim`
-            , cv.contribs.`repl.vim`
+            , cv.contribs.`nvim-tree`
             , cv.contribs.dhall-lang
             ]
         , latex.skips.small
