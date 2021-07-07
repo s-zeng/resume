@@ -34,6 +34,18 @@ let workExperience =
           , "Constructed peer-to-peer staking topology monitoring and visualization infrastructure with Python"
           ]
         }
+      , `Jane Street` = resume.Job::{
+        , company = "Jane Street Capital"
+        , title = "Software Engineering Intern"
+        , location = "New York, New York"
+        , dates =
+          { start = { year = 2022, month = resume.Month.January }
+          , end =
+              resume.EndDate.Date { year = 2022, month = resume.Month.April }
+          }
+        , skills = [ "OCaml", "Quantitative" ]
+        , bulletPoints = [] : List Text
+        }
       , Tesla2 = resume.Job::{
         , company = "Tesla"
         , title = resume.sweIntern "Firmware Tooling"
@@ -130,6 +142,18 @@ let workExperience =
         }
       }
 
+let chronological_jobs
+    : List resume.Job.Type
+    = [ workExperience.`Jane Street`
+      , workExperience.Tesla2
+      , workExperience.`TQ Tezos`
+      , workExperience.Tesla
+      , workExperience.`University of Waterloo`
+      , workExperience.Ericsson
+      , workExperience.CENX
+      , workExperience.`inBay Technologies`
+      ]
+
 let summary
     : List Text
     = [ "Professional experience in functional programming (Haskell, Clojure)"
@@ -217,7 +241,7 @@ let contribs =
           [ resume.Commit::{
             , longHash = "b22cce186791bc3f4bd6b6808033adf86f30af6d"
             , shortHash = "b22cce1"
-            , blurb = "Update stale code to Dhall v19 standards"
+            , blurb = "Add support for Dhall v19"
             }
           ]
         }
@@ -254,6 +278,16 @@ let miscExperience =
         , title = "Camp Counsellor"
         , blurb = "For youth robotics camps"
         }
+      , ta = resume.IconHighlight::{
+        , icon = "\\faGraduationCap"
+        , title = "Teaching Assistant"
+        , blurb = "Number theory and algebra"
+        }
+      , fullstack = resume.IconHighlight::{
+        , icon = "\\faCode"
+        , title = "Full Stack SWE Intern"
+        , blurb = "inBay Technologies (2016)"
+        }
       }
 
 let coursework
@@ -283,4 +317,5 @@ in  { info
     , coursework
     , education
     , socials
+    , chronological_jobs
     }

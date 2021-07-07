@@ -34,13 +34,8 @@ let jobs
                   job
               //  { bulletPoints = Prelude.List.drop n Text job.bulletPoints }
 
-      let takePoints =
-            \(n : Natural) ->
-            \(job : Job.Type) ->
-                  job
-              //  { bulletPoints = Prelude.List.take n Text job.bulletPoints }
-
-      in  [ experience.Tesla2
+      in  [ experience.`Jane Street`
+          , experience.Tesla2
           , experience.`TQ Tezos`
           ,     experience.Tesla
             //  { bulletPoints =
@@ -49,7 +44,6 @@ let jobs
                   , "Responsible for design and implementation of firmware verification infrastructure employed by entire organization"
                   ]
                 }
-          , takePoints 0 experience.`University of Waterloo`
           , experience.Ericsson
           , dropPoints 1 experience.CENX
           , dropPoints 1 experience.`inBay Technologies`

@@ -24,17 +24,6 @@ let aboutBlurb =
       This version of the resume is built from ${source}.
       ''
 
-let jobs
-    : List helpers.Job.Type
-    = [ cv.workExperience.Tesla2
-      , cv.workExperience.`TQ Tezos`
-      , cv.workExperience.Tesla
-      , cv.workExperience.`University of Waterloo`
-      , cv.workExperience.Ericsson
-      , cv.workExperience.CENX
-      , cv.workExperience.`inBay Technologies`
-      ]
-
 let projects
     : List helpers.Project.Type
     = [ cv.projects.dhall-python
@@ -94,7 +83,7 @@ in  ''
 
     # Work Experience
 
-    ${Prelude.Text.concatMapSep "\n\n" helpers.Job.Type markdown.makeJob jobs}
+    ${Prelude.Text.concatMapSep "\n\n" helpers.Job.Type markdown.makeJob cv.chronological_jobs}
 
     # Projects
 

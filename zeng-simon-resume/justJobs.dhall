@@ -10,17 +10,6 @@ let helpers = dhallResume.helpers
 
 let markdown = dhallResume.markdown
 
-let jobs
-    : List helpers.Job.Type
-    = [ cv.workExperience.Tesla2
-      , cv.workExperience.`TQ Tezos`
-      , cv.workExperience.Tesla
-      , cv.workExperience.`University of Waterloo`
-      , cv.workExperience.Ericsson
-      , cv.workExperience.CENX
-      , cv.workExperience.`inBay Technologies`
-      ]
-
 let makeJob =
       λ(job : helpers.Job.Type) →
         ''
@@ -32,5 +21,5 @@ let makeJob =
 in  ''
     # Work Experience
 
-    ${Prelude.Text.concatMapSep "\n\n" helpers.Job.Type makeJob jobs}
+    ${Prelude.Text.concatMapSep "\n\n" helpers.Job.Type makeJob cv.chronological_jobs}
     ''

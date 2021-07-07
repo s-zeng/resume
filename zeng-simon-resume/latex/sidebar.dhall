@@ -16,16 +16,16 @@ let sidebar
         , latex.skips.small
         , latex.sidebar.makeOSS
             latex.skips.smallDivider
-            [ cv.contribs.dhall-kubernetes
-            , cv.contribs.`telescope.nvim`
+            [ cv.contribs.`telescope.nvim`
             , cv.contribs.`repl.vim`
+            , cv.contribs.dhall-lang
             ]
         , latex.skips.small
         , latex.sidebar.makeIcons
             "Misc Experience"
-            [ cv.miscExperience.swim
-            , cv.miscExperience.accordion
+            [ cv.miscExperience.ta
             , cv.miscExperience.counsellor
+            , cv.miscExperience.accordion
             ]
         , latex.sidebar.makeEducation cv.education
         ]
