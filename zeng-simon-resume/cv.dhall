@@ -249,7 +249,7 @@ let contribs =
         , project = resume.Project::{
           , author = "kyazdani42"
           , title = "nvim-tree.lua"
-          , skills = [ "Lua", "Vimscript" ]
+          , skills = [ "Lua", "Vim Script" ]
           , blurb = "A fast file explorer tree for neovim"
           }
         , commits =
