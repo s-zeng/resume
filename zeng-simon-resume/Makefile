@@ -1,5 +1,5 @@
 RESUME_NAME=Zeng_Simon_Resume
-OUTPUT_TYPES=json yaml pdf docx md dhall minimal.pdf
+OUTPUT_TYPES=json yaml pdf docx md dhall minimal.pdf png
 ARTIFACTS=$(foreach type,$(OUTPUT_TYPES),target/$(RESUME_NAME).$(type)) target/index.md target/_config.yml
 DEPENDS=cv.dhall dhallResume.dhall | target/
 
@@ -37,6 +37,9 @@ target/_config.yml: jenkins.dhall $(DEPENDS)
 target/$(RESUME_NAME).pdf: latex/Makefile $(wildcard latex/*.dhall) $(DEPENDS)
 	cd latex/ && make
 	cp latex/$(RESUME_NAME).pdf target/
+
+target/$(RESUME_NAME).png: target/$(RESUME_NAME).pdf
+	pdftoppm -r 300 -png target/$(RESUME_NAME).pdf > $@
 
 target/$(RESUME_NAME).minimal.pdf: target/$(RESUME_NAME).md
 	pandoc -o $@ target/$(RESUME_NAME).md

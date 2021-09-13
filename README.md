@@ -7,6 +7,7 @@ choice:
 
 - [PDF](https://simonzeng.com/resume/Zeng_Simon_Resume.pdf)
 - [Word Document (DOCX)](https://simonzeng.com/resume/Zeng_Simon_Resume.docx)
+- [PNG](https://simonzeng.com/resume/Zeng_Simon_Resume.png)
 - [Markdown](https://simonzeng.com/resume/index.md)
 
 In addition, my resume is available in a number of machine readable formats:
@@ -35,6 +36,10 @@ Everytime I update my resume, I tag a release. You can check the releases on the
 right-hand side of this github page to view my latest resume. Alternatively, 
 each release also pushes my latest resumes to 
 [https://simonzeng.com/resume](https://simonzeng.com/resume)
+
+## Preview
+
+![Current resume](https://simonzeng.com/resume/Zeng_Simon_Resume.png)
 
 # License
 

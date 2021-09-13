@@ -25,12 +25,13 @@ jobs:
         with:
           version: '1.36.0'
 
-      - name: Install xelatex
+      - name: Install from latex, poppler
         run: |
           sudo apt-get update
           sudo apt-get install texlive-xetex
           sudo apt-get install texlive-fonts-extra
           sudo apt-get install fonts-font-awesome
+          sudo apt-get install poppler
 
       - uses: r-lib/actions/setup-pandoc@v1
         with:
