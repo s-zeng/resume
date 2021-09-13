@@ -31,7 +31,7 @@ jobs:
           sudo apt-get install texlive-xetex
           sudo apt-get install texlive-fonts-extra
           sudo apt-get install fonts-font-awesome
-          sudo apt-get install poppler
+          sudo apt-get install poppler-utils
 
       - uses: r-lib/actions/setup-pandoc@v1
         with:
