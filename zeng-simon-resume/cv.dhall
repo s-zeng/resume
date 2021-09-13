@@ -35,7 +35,7 @@ let workExperience =
           ]
         }
       , `Jane Street` = resume.Job::{
-        , company = "Jane Street Capital"
+        , company = "Jane Street"
         , title = "Software Engineering Intern"
         , location = "New York, New York"
         , dates =
