@@ -53,6 +53,7 @@ in  ''
     My resume is available to download in the following formats:
 
     - [PDF](${baseURL}/${resumeName}.pdf)
+    - [PNG](${baseURL}/${resumeName}.png)
     - [Word Document (DOCX)](${baseURL}/${resumeName}.docx)
     - [Markdown](${baseURL}/index.md)
 
@@ -63,7 +64,7 @@ in  ''
     - [Dhall](${baseURL}/${resumeName}.dhall)
     - [ATS-readable pdf](${baseURL}/${resumeName}.minimal.pdf)
 
-    Alternatively, keep on reading for my full resume in web form.
+    Alternatively, keep on reading for my full resume in web and picture form.
 
     # About this resume
 
@@ -116,4 +117,9 @@ in  ''
     # Coursework
 
     ${markdown.toBulletPoints 0 cv.coursework}
+    
+    # One page resume
+    
+    ![Rendered PNG of PDF resume](${baseURL}/${resumeName}.png)
+
     ''
