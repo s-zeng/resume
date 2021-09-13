@@ -3,6 +3,7 @@
 My resume is available to download in the following formats:
 
 - [PDF](https://simonzeng.com/resume/Zeng_Simon_Resume.pdf)
+- [PNG](https://simonzeng.com/resume/Zeng_Simon_Resume.png)
 - [Word Document (DOCX)](https://simonzeng.com/resume/Zeng_Simon_Resume.docx)
 - [Markdown](https://simonzeng.com/resume/index.md)
 
@@ -13,7 +14,7 @@ Or consumable in the following machine-readable formats:
 - [Dhall](https://simonzeng.com/resume/Zeng_Simon_Resume.dhall)
 - [ATS-readable pdf](https://simonzeng.com/resume/Zeng_Simon_Resume.minimal.pdf)
 
-Alternatively, keep on reading for my full resume in web form.
+Alternatively, keep on reading for my full resume in web and picture form.
 
 # About this resume
 
@@ -21,7 +22,7 @@ This resume, in all the formats it is available in, was generated
 automatically from a single configuration file. To see more about my
 process, take a look at the repo [here](https://github.com/s-zeng/resume).
 
-This version of the resume is built from refs/tags/2021-09-13.0.
+This version of the resume is built from refs/tags/2021-09-13.1.
 
 
 # Contact Info
@@ -166,3 +167,8 @@ This version of the resume is built from refs/tags/2021-09-13.0.
 - OOP Programming (C++)
 - Formal Logic and Interactive Theorem Proving (Coq)
 - Compilers and Interpreters
+
+# One page resume
+
+![Rendered PNG of PDF resume](https://simonzeng.com/resume/Zeng_Simon_Resume.png)
+
