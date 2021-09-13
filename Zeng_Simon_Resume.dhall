@@ -1,6 +1,6 @@
 { chronological_jobs =
   [ { bulletPoints = [] : List Text
-    , company = "Jane Street Capital"
+    , company = "Jane Street"
     , dates =
       { end =
           < Current
@@ -820,7 +820,7 @@
     }
   , `Jane Street` =
     { bulletPoints = [] : List Text
-    , company = "Jane Street Capital"
+    , company = "Jane Street"
     , dates =
       { end =
           < Current

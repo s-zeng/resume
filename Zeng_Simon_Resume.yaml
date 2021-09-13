@@ -1,6 +1,6 @@
 chronological_jobs:
   - bulletPoints: []
-    company: Jane Street Capital
+    company: Jane Street
     dates:
       end:
         month: April
@@ -314,7 +314,7 @@ workExperience:
     title: "Software Engineering Intern (Performance)"
   Jane Street:
     bulletPoints: []
-    company: Jane Street Capital
+    company: Jane Street
     dates:
       end:
         month: April
