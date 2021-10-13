@@ -34,16 +34,17 @@ let monthToShortText =
           }
           m
 
-let Date = { Type = { year : Natural, month : Month }, default = {=} }
+-- TODO: use the new dhall builtin date type, and implement pretty printing for that
+let ResumeDate = { Type = { year : Natural, month : Month }, default = {=} }
 
-let EndDate = < Date : Date.Type | Current >
+let EndDate = < Date : ResumeDate.Type | Current >
 
 let makeDate =
-      λ(date : Date.Type) →
+      λ(date : ResumeDate.Type) →
         "${monthToShortText date.month} ${Natural/show date.year}"
 
 let makeDates =
-      λ(jobDates : { start : Date.Type, end : EndDate }) →
+      λ(jobDates : { start : ResumeDate.Type, end : EndDate }) →
         let endDate =
               merge { Date = makeDate, Current = "Present" } jobDates.end
 
@@ -78,7 +79,7 @@ let Job =
           { title : Text
           , location : Text
           , company : Text
-          , dates : { start : Date.Type, end : EndDate }
+          , dates : { start : ResumeDate.Type, end : EndDate }
           , skills : List Text
           , bulletPoints : List Text
           }
@@ -107,13 +108,13 @@ let Contrib =
 
 let Education =
       { Type =
-          { school : Text, degree : Text, major : Text, gradDate : Date.Type }
-      , default.gradDate = Date.default
+          { school : Text, degree : Text, major : Text, gradDate : ResumeDate.Type }
+      , default.gradDate = ResumeDate.default
       }
 
 in  { Commit
     , Contrib
-    , Date
+    , ResumeDate
     , Education
     , EndDate
     , IconHighlight

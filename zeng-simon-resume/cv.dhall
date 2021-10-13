@@ -304,7 +304,7 @@ let education
         , school = "University of Waterloo"
         , degree = "Bachelor's degree"
         , major = "Computer Science"
-        , gradDate = resume.Date::{ month = resume.Month.May, year = 2022 }
+        , gradDate = resume.ResumeDate::{ month = resume.Month.May, year = 2022 }
         }
       ]
 
