@@ -1,6 +1,6 @@
 let cv = ./cv.dhall
 
-let blurb = "3rd-year Computer Science student seeking summer 2021 internship"
+let blurb = "Haskell Software Engineer"
 
 in  ''
     title: ${cv.info.name} - Resume
