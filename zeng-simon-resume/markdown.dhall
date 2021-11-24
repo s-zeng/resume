@@ -50,7 +50,11 @@ in  ''
 
     ## Work Experience
 
-    ${Prelude.Text.concatMapSep "\n\n" helpers.Job.Type markdown.makeJob cv.chronological_jobs}
+    ${Prelude.Text.concatMapSep
+        "\n\n"
+        helpers.Job.Type
+        markdown.makeJob
+        cv.chronological_jobs}
 
     ## Projects
 

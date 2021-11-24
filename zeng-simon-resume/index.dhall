@@ -84,7 +84,11 @@ in  ''
 
     # Work Experience
 
-    ${Prelude.Text.concatMapSep "\n\n" helpers.Job.Type markdown.makeJob cv.chronological_jobs}
+    ${Prelude.Text.concatMapSep
+        "\n\n"
+        helpers.Job.Type
+        markdown.makeJob
+        cv.chronological_jobs}
 
     # Projects
 
@@ -117,9 +121,9 @@ in  ''
     # Coursework
 
     ${markdown.toBulletPoints 0 cv.coursework}
-    
+
     # One page resume
-    
+
     ![Rendered PNG of PDF resume](${baseURL}/${resumeName}.png)
 
     ''

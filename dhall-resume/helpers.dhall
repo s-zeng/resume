@@ -1,5 +1,6 @@
 let Prelude =
-      https://prelude.dhall-lang.org/v19.0.0/package.dhall sha256:eb693342eb769f782174157eba9b5924cf8ac6793897fc36a31ccbd6f56dafe2
+      https://prelude.dhall-lang.org/v19.0.0/package.dhall
+        sha256:eb693342eb769f782174157eba9b5924cf8ac6793897fc36a31ccbd6f56dafe2
 
 let Month =
       < January
@@ -34,7 +35,6 @@ let monthToShortText =
           }
           m
 
--- TODO: use the new dhall builtin date type, and implement pretty printing for that
 let ResumeDate = { Type = { year : Natural, month : Month }, default = {=} }
 
 let EndDate = < Date : ResumeDate.Type | Current >
@@ -108,7 +108,11 @@ let Contrib =
 
 let Education =
       { Type =
-          { school : Text, degree : Text, major : Text, gradDate : ResumeDate.Type }
+          { school : Text
+          , degree : Text
+          , major : Text
+          , gradDate : ResumeDate.Type
+          }
       , default.gradDate = ResumeDate.default
       }
 

@@ -10,14 +10,15 @@ let sidebar
         [ latex.sidebar.makeProjects
             latex.skips.smallDivider
             [ cv.projects.dhall-python
-            , cv.projects.board-to-latex // {blurb = "Turn pictures of math into \\LaTeX"}
+            ,     cv.projects.board-to-latex
+              //  { blurb = "Turn pictures of math into \\LaTeX" }
             , cv.projects.rag-shenanigann
             ]
         , latex.skips.small
         , latex.sidebar.makeOSS
             latex.skips.smallDivider
             [ cv.contribs.`telescope.nvim`
-            , cv.contribs.`nvim-tree`
+            , cv.contribs.nvim-tree
             , cv.contribs.dhall-lang
             ]
         , latex.skips.small

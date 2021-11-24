@@ -21,5 +21,9 @@ let makeJob =
 in  ''
     # Work Experience
 
-    ${Prelude.Text.concatMapSep "\n\n" helpers.Job.Type makeJob cv.chronological_jobs}
+    ${Prelude.Text.concatMapSep
+        "\n\n"
+        helpers.Job.Type
+        makeJob
+        cv.chronological_jobs}
     ''
