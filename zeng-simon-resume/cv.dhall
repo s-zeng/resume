@@ -215,6 +215,21 @@ let contribs =
             }
           ]
         }
+      , parinfer-rust = resume.Contrib::{
+        , project = resume.Project::{
+          , author = "eraserhd"
+          , title = "parinfer-rust"
+          , skills = [ "Rust", "Vim" ]
+          , blurb = "Infer Lisp parenthesis placement from indentation"
+          }
+        , commits =
+          [ resume.Commit::{
+            , longHash = "835541eb3de66d06db2ffd2694375090e1221902"
+            , shortHash = "835541e"
+            , blurb = "Add support for Dune"
+            }
+          ]
+        }
       , `repl.vim` = resume.Contrib::{
         , project = resume.Project::{
           , author = "ujihisa"

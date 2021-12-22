@@ -17,9 +17,9 @@ let sidebar
         , latex.skips.small
         , latex.sidebar.makeOSS
             latex.skips.smallDivider
-            [ cv.contribs.`telescope.nvim`
+            [ cv.contribs.parinfer-rust
+            , cv.contribs.`telescope.nvim`
             , cv.contribs.nvim-tree
-            , cv.contribs.dhall-lang
             ]
         , latex.skips.small
         , latex.sidebar.makeIcons
