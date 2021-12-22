@@ -169,6 +169,18 @@ contribs:
         - Lua
         - Vim Script
       title: nvim-tree.lua
+  parinfer-rust:
+    commits:
+      - blurb: Add support for Dune
+        longHash: "835541eb3de66d06db2ffd2694375090e1221902"
+        shortHash: '835541e'
+    project:
+      author: eraserhd
+      blurb: Infer Lisp parenthesis placement from indentation
+      skills:
+        - Rust
+        - Vim
+      title: parinfer-rust
   repl.vim:
     commits:
       - blurb: Add support for Racket
