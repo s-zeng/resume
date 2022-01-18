@@ -29,21 +29,20 @@ let options =
 let jobs
     : List Job.Type
     = let dropPoints =
-            \(n : Natural) ->
-            \(job : Job.Type) ->
-                  job
-              //  { bulletPoints = Prelude.List.drop n Text job.bulletPoints }
+            λ(n : Natural) →
+            λ(job : Job.Type) →
+              job ⫽ { bulletPoints = Prelude.List.drop n Text job.bulletPoints }
 
       in  [ experience.`Jane Street`
           , experience.Tesla2
           , experience.`TQ Tezos`
-          ,     experience.Tesla
-            //  { bulletPoints =
-                  [ "Developed and maintained large Haskell code base responsible for automated firmware documentation, code, and signal generation"
-                  , "Improved Haskell products' performance and runtimes by over 20\\% by identifying laziness-related space leaks and rewriting hot code paths"
-                  , "Responsible for design and implementation of firmware verification infrastructure employed by entire organization"
-                  ]
-                }
+          ,   experience.Tesla
+            ⫽ { bulletPoints =
+                [ "Developed and maintained large Haskell code base responsible for automated firmware documentation, code, and signal generation"
+                , "Improved Haskell products' performance and runtimes by over 20\\% by identifying laziness-related space leaks and rewriting hot code paths"
+                , "Responsible for design and implementation of firmware verification infrastructure employed by entire organization"
+                ]
+              }
           , experience.Ericsson
           , dropPoints 1 experience.CENX
           , dropPoints 1 experience.`inBay Technologies`

@@ -10,8 +10,8 @@ let sidebar
         [ latex.sidebar.makeProjects
             latex.skips.smallDivider
             [ cv.projects.dhall-python
-            ,     cv.projects.board-to-latex
-              //  { blurb = "Turn pictures of math into \\LaTeX" }
+            ,   cv.projects.board-to-latex
+              ⫽ { blurb = "Turn pictures of math into \\LaTeX" }
             , cv.projects.rag-shenanigann
             ]
         , latex.skips.small
