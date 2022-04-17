@@ -80,7 +80,6 @@ let workExperience =
           [ "Developed and maintained large Haskell code base responsible for automated firmware documentation, code, and signal generation"
           , "Improved Haskell products' performance and runtimes by over 20% by identifying laziness-related space leaks and rewriting hot code paths"
           , "Responsible for design and implementation of firmware verification infrastructure employed by entire organization"
-          , "Designed and developed robust firmware signal inspection architecture with Java and modern statically typed Python"
           ]
         }
       , `University of Waterloo` = resume.Job::{
@@ -127,7 +126,6 @@ let workExperience =
         , bulletPoints =
           [ "Developed robust automated Python framework for load-testing web apps"
           , "Created custom implementation of IETF RFC socket protocols to debug non-standard network stacks"
-          , "Discovered and provided patches for multiple security issues, including cryptography weaknesses, via automated fuzzing"
           ]
         }
       , `inBay Technologies` = resume.Job::{

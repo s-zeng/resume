@@ -40,6 +40,7 @@ let jobs
             ⫽ { bulletPoints =
                 [ "Developed and maintained large Haskell code base responsible for automated firmware documentation, code, and signal generation"
                 , "Improved Haskell products' performance and runtimes by over 20\\% by identifying laziness-related space leaks and rewriting hot code paths"
+                , "Responsible for design and implementation of firmware verification infrastructure employed by entire organization"
                 ]
               }
           , experience.Ericsson
