@@ -24,9 +24,9 @@ let sidebar
         , latex.skips.small
         , latex.sidebar.makeIcons
             "Misc Experience"
-            [ cv.miscExperience.ta
+            [ cv.miscExperience.fullstack
+            , cv.miscExperience.ta
             , cv.miscExperience.counsellor
-            , cv.miscExperience.accordion
             ]
         , latex.sidebar.makeEducation cv.education
         ]

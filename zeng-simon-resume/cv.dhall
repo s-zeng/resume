@@ -29,8 +29,8 @@ let workExperience =
           }
         , skills = [ "Blockchain", "Haskell" ]
         , bulletPoints =
-          [ "Authored Tezos smart contracts in a Haskell EDSL to automate proprietary applications for permissioned blockchains"
-          , "Converted fragmented Python-based Tezos Kubernetes deployment script to idiomatic Dhall, greatly improving readability and maintainability"
+          [ "Converted fragmented Python-based Tezos Kubernetes deployment script to idiomatic Dhall, greatly improving readability and maintainability"
+          , "Authored Tezos smart contracts in a Haskell EDSL to automate proprietary applications for permissioned blockchains"
           , "Constructed peer-to-peer staking topology monitoring and visualization infrastructure with Python"
           ]
         }
@@ -43,8 +43,12 @@ let workExperience =
           , end =
               resume.EndDate.Date { year = 2022, month = resume.Month.April }
           }
-        , skills = [ "OCaml", "Quantitative" ]
-        , bulletPoints = [] : List Text
+        , skills = [ "OCaml", "Code Generation" ]
+        , bulletPoints =
+          [ "Designed and developed an original implementation of the XML XSD specification, including code generation of OCaml types and applicative-parser- combinator-based (de)serializers"
+          , "Created a from-scratch API-compatible implementation of Confluent's Schema Registry in OCaml"
+          , "Contributed better high level code output to Jane Street's soon-to-be open-sourced Chromium API bindings generator"
+          ]
         }
       , Tesla2 = resume.Job::{
         , company = "Tesla"
@@ -156,7 +160,7 @@ let chronological_jobs
 
 let summary
     : List Text
-    = [ "Professional experience in functional programming (Haskell, Clojure)"
+    = [ "Professional experience in functional programming (Haskell, OCaml, Clojure)"
       , "Competent core development skills (Python, Java, Ruby, Javascript)"
       , "Avid user and contributor of free, libre, and open source software"
       , "Strong background in mathematics"
@@ -321,7 +325,7 @@ let education
         , major = "Computer Science"
         , gradDate = resume.ResumeDate::{
           , month = resume.Month.May
-          , year = 2022
+          , year = 2023
           }
         }
       ]
