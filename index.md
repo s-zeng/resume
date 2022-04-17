@@ -22,7 +22,7 @@ This resume, in all the formats it is available in, was generated
 automatically from a single configuration file. To see more about my
 process, take a look at the repo [here](https://github.com/s-zeng/resume).
 
-This version of the resume is built from refs/tags/2021-12-22.0.
+This version of the resume is built from refs/tags/2022-04-16.0.
 
 
 # Contact Info
@@ -35,7 +35,7 @@ This version of the resume is built from refs/tags/2021-12-22.0.
 
 # About me
 
-- Professional experience in functional programming (Haskell, Clojure)
+- Professional experience in functional programming (Haskell, OCaml, Clojure)
 - Competent core development skills (Python, Java, Ruby, Javascript)
 - Avid user and contributor of free, libre, and open source software
 - Strong background in mathematics
@@ -46,7 +46,11 @@ This version of the resume is built from refs/tags/2021-12-22.0.
 
 - Date: Jan 2022 -- Apr 2022
 - Location: New York, New York
-- Skills: OCaml, Quantitative
+- Skills: OCaml, Code Generation
+- Description:
+  - Designed and developed an original implementation of the XML XSD specification, including code generation of OCaml types and applicative-parser- combinator-based (de)serializers
+  - Created a from-scratch API-compatible implementation of Confluent's Schema Registry in OCaml
+  - Contributed better high level code output to Jane Street's soon-to-be open-sourced Chromium API bindings generator
 
 
 
@@ -68,8 +72,8 @@ This version of the resume is built from refs/tags/2021-12-22.0.
 - Location: New York, New York
 - Skills: Blockchain, Haskell
 - Description:
-  - Authored Tezos smart contracts in a Haskell EDSL to automate proprietary applications for permissioned blockchains
   - Converted fragmented Python-based Tezos Kubernetes deployment script to idiomatic Dhall, greatly improving readability and maintainability
+  - Authored Tezos smart contracts in a Haskell EDSL to automate proprietary applications for permissioned blockchains
   - Constructed peer-to-peer staking topology monitoring and visualization infrastructure with Python
 
 
@@ -83,7 +87,6 @@ This version of the resume is built from refs/tags/2021-12-22.0.
   - Developed and maintained large Haskell code base responsible for automated firmware documentation, code, and signal generation
   - Improved Haskell products' performance and runtimes by over 20% by identifying laziness-related space leaks and rewriting hot code paths
   - Responsible for design and implementation of firmware verification infrastructure employed by entire organization
-  - Designed and developed robust firmware signal inspection architecture with Java and modern statically typed Python
 
 
 
@@ -117,7 +120,6 @@ This version of the resume is built from refs/tags/2021-12-22.0.
 - Description:
   - Developed robust automated Python framework for load-testing web apps
   - Created custom implementation of IETF RFC socket protocols to debug non-standard network stacks
-  - Discovered and provided patches for multiple security issues, including cryptography weaknesses, via automated fuzzing
 
 
 
@@ -159,7 +161,7 @@ This version of the resume is built from refs/tags/2021-12-22.0.
 
 # Education
 
-- University of Waterloo (May 2022): Bachelor's degree, Computer Science
+- University of Waterloo (May 2023): Bachelor's degree, Computer Science
 
 # Coursework
 

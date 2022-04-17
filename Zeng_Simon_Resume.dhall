@@ -1,5 +1,9 @@
 { chronological_jobs =
-  [ { bulletPoints = [] : List Text
+  [ { bulletPoints =
+      [ "Designed and developed an original implementation of the XML XSD specification, including code generation of OCaml types and applicative-parser- combinator-based (de)serializers"
+      , "Created a from-scratch API-compatible implementation of Confluent's Schema Registry in OCaml"
+      , "Contributed better high level code output to Jane Street's soon-to-be open-sourced Chromium API bindings generator"
+      ]
     , company = "Jane Street"
     , dates =
       { end =
@@ -57,7 +61,7 @@
         }
       }
     , location = "New York, New York"
-    , skills = [ "OCaml", "Quantitative" ]
+    , skills = [ "OCaml", "Code Generation" ]
     , title = "Software Engineering Intern"
     }
   , { bulletPoints =
@@ -126,8 +130,8 @@
     , title = "Software Engineering Intern (Firmware Tooling)"
     }
   , { bulletPoints =
-      [ "Authored Tezos smart contracts in a Haskell EDSL to automate proprietary applications for permissioned blockchains"
-      , "Converted fragmented Python-based Tezos Kubernetes deployment script to idiomatic Dhall, greatly improving readability and maintainability"
+      [ "Converted fragmented Python-based Tezos Kubernetes deployment script to idiomatic Dhall, greatly improving readability and maintainability"
+      , "Authored Tezos smart contracts in a Haskell EDSL to automate proprietary applications for permissioned blockchains"
       , "Constructed peer-to-peer staking topology monitoring and visualization infrastructure with Python"
       ]
     , company = "TQ Tezos"
@@ -194,7 +198,6 @@
       [ "Developed and maintained large Haskell code base responsible for automated firmware documentation, code, and signal generation"
       , "Improved Haskell products' performance and runtimes by over 20% by identifying laziness-related space leaks and rewriting hot code paths"
       , "Responsible for design and implementation of firmware verification infrastructure employed by entire organization"
-      , "Designed and developed robust firmware signal inspection architecture with Java and modern statically typed Python"
       ]
     , company = "Tesla"
     , dates =
@@ -387,7 +390,6 @@
   , { bulletPoints =
       [ "Developed robust automated Python framework for load-testing web apps"
       , "Created custom implementation of IETF RFC socket protocols to debug non-standard network stacks"
-      , "Discovered and provided patches for multiple security issues, including cryptography weaknesses, via automated fuzzing"
       ]
     , company = "CENX"
     , dates =
@@ -622,7 +624,7 @@
           | October
           | September
           >.May
-      , year = 2022
+      , year = 2023
       }
     , major = "Computer Science"
     , school = "University of Waterloo"
@@ -695,7 +697,7 @@
   , linkedin = { baseUrl = "https://linkedin.com/in", userName = "s-zeng1" }
   }
 , summary =
-  [ "Professional experience in functional programming (Haskell, Clojure)"
+  [ "Professional experience in functional programming (Haskell, OCaml, Clojure)"
   , "Competent core development skills (Python, Java, Ruby, Javascript)"
   , "Avid user and contributor of free, libre, and open source software"
   , "Strong background in mathematics"
@@ -705,7 +707,6 @@
     { bulletPoints =
       [ "Developed robust automated Python framework for load-testing web apps"
       , "Created custom implementation of IETF RFC socket protocols to debug non-standard network stacks"
-      , "Discovered and provided patches for multiple security issues, including cryptography weaknesses, via automated fuzzing"
       ]
     , company = "CENX"
     , dates =
@@ -833,7 +834,11 @@
     , title = "Software Engineering Intern (Performance)"
     }
   , `Jane Street` =
-    { bulletPoints = [] : List Text
+    { bulletPoints =
+      [ "Designed and developed an original implementation of the XML XSD specification, including code generation of OCaml types and applicative-parser- combinator-based (de)serializers"
+      , "Created a from-scratch API-compatible implementation of Confluent's Schema Registry in OCaml"
+      , "Contributed better high level code output to Jane Street's soon-to-be open-sourced Chromium API bindings generator"
+      ]
     , company = "Jane Street"
     , dates =
       { end =
@@ -891,13 +896,13 @@
         }
       }
     , location = "New York, New York"
-    , skills = [ "OCaml", "Quantitative" ]
+    , skills = [ "OCaml", "Code Generation" ]
     , title = "Software Engineering Intern"
     }
   , `TQ Tezos` =
     { bulletPoints =
-      [ "Authored Tezos smart contracts in a Haskell EDSL to automate proprietary applications for permissioned blockchains"
-      , "Converted fragmented Python-based Tezos Kubernetes deployment script to idiomatic Dhall, greatly improving readability and maintainability"
+      [ "Converted fragmented Python-based Tezos Kubernetes deployment script to idiomatic Dhall, greatly improving readability and maintainability"
+      , "Authored Tezos smart contracts in a Haskell EDSL to automate proprietary applications for permissioned blockchains"
       , "Constructed peer-to-peer staking topology monitoring and visualization infrastructure with Python"
       ]
     , company = "TQ Tezos"
@@ -965,7 +970,6 @@
       [ "Developed and maintained large Haskell code base responsible for automated firmware documentation, code, and signal generation"
       , "Improved Haskell products' performance and runtimes by over 20% by identifying laziness-related space leaks and rewriting hot code paths"
       , "Responsible for design and implementation of firmware verification infrastructure employed by entire organization"
-      , "Designed and developed robust firmware signal inspection architecture with Java and modern statically typed Python"
       ]
     , company = "Tesla"
     , dates =
